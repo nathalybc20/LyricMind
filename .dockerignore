@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+pip-cache/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Logs and data (if not needed in the image)
+# Adjust these based on your project's needs
+data/logs/*.log
+# If your SQLite DB in data/ should not be part of the image, uncomment:
+# data/*.db
+# data/*.sqlite
+# data/*.sqlite3
+
+# Test reports
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# Build artifacts
+dist/
+build/
+*.egg

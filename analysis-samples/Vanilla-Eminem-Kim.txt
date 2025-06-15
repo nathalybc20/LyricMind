@@ -1,0 +1,74 @@
+{
+  "analysis": {
+    "filtering_results": {
+      "explicit_language": 1.0,
+      "sexual_content": 0.0,
+      "violence_level": 1.0,
+      "substance_glorification": 0.2,
+      "age_appropriateness": 21
+    },
+    "detailed_analysis": {
+      "content_ratings": {
+        "substance_use": 0.2,
+        "substances_referenced": [
+          "alcohol"
+        ],
+        "violence_references": {
+          "physical_violence": 1.0,
+          "emotional_violence": 1.0,
+          "self_harm_references": 1.0,
+          "weapon_mentions": 0.5,
+          "threats_intimidation": 1.0,
+          "domestic_violence": 1.0,
+          "gang_violence": 0.0,
+          "suicide_references": 1.0
+        }
+      },
+      "cognitive_distortions": {
+        "all_or_nothing_thinking": 0.8,
+        "catastrophizing": 0.8,
+        "personalization": 1.0,
+        "mind_reading": 0.7,
+        "fortune_telling": 0.7,
+        "emotional_reasoning": 1.0,
+        "should_statements": 0.7,
+        "labeling": 1.0,
+        "mental_filter": 0.8,
+        "disqualifying_positive": 0.7,
+        "magnification_minimization": 0.8,
+        "blame_attribution": 1.0
+      },
+      "thematic_analysis": {
+        "primary_themes": [
+          "betrayal",
+          "anger",
+          "revenge"
+        ],
+        "emotional_tone": "aggressive",
+        "repetition_level": 0.6,
+        "repetition_type": "mantra_negative"
+      },
+      "impact_metrics": {
+        "potential_influence": {
+          "substance_use_normalization": 0.2,
+          "cognitive_impact": 1.0,
+          "emotional_impact": 1.0,
+          "behavioral_modeling_risk": 1.0,
+          "subconscious_reinforcement": 1.0
+        }
+      },
+      "summary": {
+        "content_advisory": "This song contains explicit language, intense violence, and emotional abuse. It also includes references to self-harm and suicide. The lyrics depict a highly distressing scenario and use aggressive language throughout.",
+        "contextual_note": "This song is a fictional narrative and should not be taken literally. It is intended for mature audiences and may be disturbing for some listeners."
+      }
+    }
+  },
+  "metadata": {
+    "artist": "eminem",
+    "title": "kim",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 1401,
+    "track_url": "https://genius.com/Eminem-kim-lyrics"
+  }
+}

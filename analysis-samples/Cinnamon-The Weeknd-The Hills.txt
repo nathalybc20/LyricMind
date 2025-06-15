@@ -1,0 +1,138 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.6,
+        "label": "Moderate/Emotionally Charged"
+      },
+      "sexual_content": {
+        "score": 0.7,
+        "label": "High/Explicit"
+      },
+      "violence_graphicness": {
+        "score": 0.2,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.7,
+        "label": "High/Glorified"
+      },
+      "negative_psychological_impact": {
+        "score": 0.7,
+        "label": "High Negative Impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Positive Impact"
+      },
+      "min_age_rating": {
+        "rating_label": "young_adult",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.6,
+          "label": "Emotionally Charged"
+        },
+        "substance_messaging": {
+          "score": 0.7,
+          "label": "Romanticized/Escapist/Dependency-promoting"
+        },
+        "substances_mentioned": [
+          "drugs",
+          "alcohol"
+        ],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.1,
+          "relational_toxicity_score": 0.3,
+          "self_destructive_themes_score": 0.6,
+          "power_dynamics_score": 0.5,
+          "trauma_references_score": 0.2,
+          "overall_aggression_score": 0.2,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.7,
+          "label": "High/Explicit"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.7,
+          "label": "High"
+        },
+        "helplessness_messaging": {
+          "score": 0.6,
+          "label": "High"
+        },
+        "identity_rigidity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "social_comparison": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "catastrophic_outlook": {
+          "score": 0.6,
+          "label": "High"
+        },
+        "perfectionism": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.6,
+          "label": "High"
+        },
+        "grandiosity": {
+          "score": 0.3,
+          "label": "Low"
+        },
+        "attachment_insecurity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "overall_negative_patterns_score": 0.7,
+        "label_negative_patterns": "High"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.2,
+        "resilience_promotion_score": 0.3,
+        "growth_potential_score": 0.2,
+        "overall_positive_attributes_score": 0.2,
+        "label_positive_attributes": "Low"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Intimacy",
+          "Substance Use",
+          "Identity Struggles"
+        ],
+        "emotional_journey_description": "The song describes a tumultuous emotional journey, marked by substance use, sexual encounters, and struggles with identity and self-worth.",
+        "message_reinforcement_clarity_score": 0.6,
+        "lyrical_sophistication_score": 0.5
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains explicit sexual content, substance use, and themes of self-destruction and helplessness. It may not be suitable for younger audiences or those sensitive to these topics.",
+        "therapeutic_considerations": "The song could potentially be used in therapeutic contexts to explore themes of identity, self-worth, and coping mechanisms. However, caution should be exercised due to its explicit content and potential to trigger negative emotions or memories.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "young_adult",
+          "numeric_min_age": 18,
+          "rationale_for_assessment": "The song's explicit content, mature themes, and potential psychological impact make it more suitable for young adults."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "The Weeknd",
+    "title": "The Hills",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 727466,
+    "track_url": "https://genius.com/The-weeknd-the-hills-lyrics"
+  }
+}

@@ -1,0 +1,305 @@
+# Vanilla Music Lyrics Analysis Framework
+**Version: 1.0**  
+**Updated: 2025-05-24**  
+**Changes: Added cognitive distortion filtering, consolidated to 5 main sliders**
+
+**Instructions for AI Analysis:**
+Analyze song lyrics to provide content ratings for a music filtering system. Uses cognitive_distortions from Cognitive Behavioural Therapy (CBT). Do not reproduce copyrighted lyrics in your response. Focus on objective measurements of potentially sensitive content using a scale of 0.0 (none/minimal) to 1.0 (maximum/severe).
+
+## FILTERING_METRICS (For Music Player Integration)
+
+```json
+{
+  "framework_name": "vanilla",
+  "description": "The Vanilla framework provides a foundational analysis of song lyrics, focusing on objective measurement of common sensitive content categories like explicit language, sexual content, violence, and substance promotion. It also introduces a basic assessment of negative psychological impact based on cognitive distortions.",
+  "color_hex": "#F0EBE3",
+  "filtering_thresholds": {
+    "explicit_language": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.5,
+      "description": "Level of profanity and explicit language. Higher scores indicate more explicit language.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Clean"},
+        {"range": [0.3, 0.4], "label": "Mild"},
+        {"range": [0.5, 0.7], "label": "Moderate"},
+        {"range": [0.8, 1.0], "label": "Heavy/Frequent"}
+      ],
+      "interpretation_note": "Higher score = more explicit language. Songs ABOVE threshold are filtered."
+    },
+    "sexual_content": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Level of sexual themes and adult content. Higher scores indicate more explicit or mature themes.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "All-Ages"},
+        {"range": [0.3, 0.4], "label": "Mild Suggestive"},
+        {"range": [0.5, 0.7], "label": "Explicit Themes"},
+        {"range": [0.8, 1.0], "label": "Graphic/Heavy Adult"}
+      ],
+      "interpretation_note": "Higher score = more sexual content. Songs ABOVE threshold are filtered."
+    },
+    "violence_graphicness": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.7,
+      "description": "Level of violence, aggression, and self-harm references. Higher scores indicate more graphic or impactful violence.",
+       "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Low"},
+        {"range": [0.3, 0.4], "label": "Mild Conflict"},
+        {"range": [0.5, 0.7], "label": "Moderate Violence/Threats"},
+        {"range": [0.8, 1.0], "label": "Graphic/Extreme Threats"}
+      ],
+      "interpretation_note": "Higher score = more violence. Songs ABOVE threshold are filtered."
+    },
+    "substance_promotion": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Level of substance use glorification or normalization. Higher scores indicate more promotion.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Low"},
+        {"range": [0.3, 0.4], "label": "Casual Mentions"},
+        {"range": [0.5, 0.7], "label": "Mild Glorification"},
+        {"range": [0.8, 1.0], "label": "Heavy Glorification"}
+      ],
+      "interpretation_note": "Higher score = more substance promotion. Songs ABOVE threshold are filtered."
+    },
+    "negative_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Potential for inducing negative thoughts, cognitive distortions, or distress. Higher scores indicate greater negative impact.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Minimal Impact"},
+        {"range": [0.3, 0.4], "label": "Mild Concerning Patterns"},
+        {"range": [0.5, 0.7], "label": "Moderate Distortions/Harmful Messaging"},
+        {"range": [0.8, 1.0], "label": "Severe Distortions/Dangerous Conditioning"}
+      ],
+      "interpretation_note": "Higher score = MORE negative psychological impact. Songs ABOVE threshold are filtered."
+    },
+    "positive_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.0, 
+      "description": "This framework primarily focuses on risk; positive impact is not a direct filtering metric but can be noted. Set to 0 to not filter based on lack of positive impact.",
+      "value_range_labels": [
+        {"range": [0.0, 1.0], "label": "Not Actively Assessed for Filtering"}
+      ],
+      "interpretation_note": "Higher score = more positive psychological impact. Songs BELOW threshold are filtered. Vanilla focuses on risk mitigation."
+    },
+    "min_age_rating_filter": {
+      "type": "slider",
+      "range": [0, 18],
+      "default": 13,
+      "description": "Minimum age recommendation. Filters songs rated for an older audience than selected.",
+      "interpretation_note": "Represents minimum age. Common values: 0 (All), 7, 10, 13, 16, 18. Filters content rated above the selected age."
+    }
+  }
+}
+```
+
+## Analysis Template (JSON Format for AI Output)
+
+This is the structure the AI should return when using the Vanilla framework.
+
+```json
+{
+  "framework_applied": "vanilla",
+  "filtering_scores": {
+    "explicit_language": { 
+      "score": 0.0,
+      "label": "Clean"
+    },
+    "sexual_content": { 
+      "score": 0.0, 
+      "label": "All-Ages"
+    },
+    "violence_graphicness": { 
+      "score": 0.0, 
+      "label": "Low"
+    },
+    "substance_promotion": { 
+      "score": 0.0, 
+      "label": "Low"
+    },
+    "negative_psychological_impact": {
+      "score": 0.0, 
+      "label": "Minimal Impact", 
+      "interpretation": "Higher score = more negative impact"
+    },
+    "positive_psychological_impact": {
+      "score": 0.0, 
+      "label": "Not Actively Assessed",
+      "interpretation": "Higher score = more positive impact (informational)"
+    },
+    "min_age_rating": {
+        "rating_label": "13+",
+        "numeric_value": 13
+    }
+  },
+  "detailed_analysis": { 
+    "language_assessment": {
+        "profanity_score": 0.0, 
+        "offensive_terms_score": 0.0,
+        "overall_explicit_language_score": 0.0,
+        "label": "Clean"
+    },
+    "maturity_assessment": {
+      "sexual_content_score": 0.0,
+      "adult_themes_score": 0.0,
+      "overall_mature_content_score": 0.0,
+      "label": "All-Ages"
+    },
+    "violence_assessment": {
+      "physical_violence_score": 0.0,
+      "emotional_violence_score": 0.0,
+      "self_harm_references_score": 0.0,
+      "weapon_mentions_score": 0.0,
+      "threats_intimidation_score": 0.0,
+      "overall_violence_level_score": 0.0,
+      "label": "Low"
+    },
+    "substance_assessment": {
+      "substance_use_references_score": 0.0,
+      "substance_use_normalization_score": 0.0,
+      "overall_substance_glorification_score": 0.0,
+      "substances_mentioned": [],
+      "label": "Low"
+    },
+    "psychological_risk_assessment": {
+      "cognitive_distortions_raw": {
+        "all_or_nothing_thinking": 0.0, "catastrophizing": 0.0, "personalization": 0.0,
+        "mind_reading": 0.0, "fortune_telling": 0.0, "emotional_reasoning": 0.0,
+        "should_statements": 0.0, "labeling": 0.0, "mental_filter": 0.0,
+        "disqualifying_positive": 0.0, "magnification_minimization": 0.0, "blame_attribution": 0.0
+      },
+      "cognitive_distortion_average_score": 0.0,
+      "subconscious_reinforcement_risk_score": 0.0, 
+      "behavioral_modeling_risk_score": 0.0,
+      "overall_negative_impact_raw_score": 0.0, 
+      "overall_negative_impact_label": "Minimal Impact"
+    },
+    "general_summary": {
+      "primary_themes_identified": [],
+      "overall_emotional_tone": "neutral",
+      "content_advisory_notes": "",
+      "age_recommendation_details": {
+          "suggested_min_age_numeric": 13,
+          "rationale": ""
+      }
+    }
+  }
+}
+```
+
+## Filtering Metrics Calculation (for AI Output Generation)
+
+The AI will populate the `filtering_scores` block in its JSON output. Here's how these common scores (and their sub-field `label`) are derived from Vanilla's `detailed_analysis` components:
+
+### 1. Explicit Language
+- **Score (`filtering_scores.explicit_language.score`):** From `detailed_analysis.language_assessment.overall_explicit_language_score`.
+- **Label (`filtering_scores.explicit_language.label`):** Based on `overall_explicit_language_score`:
+  - 0.0-0.2: "Clean"
+  - 0.3-0.4: "Mild"
+  - 0.5-0.7: "Moderate"
+  - 0.8-1.0: "Heavy/Frequent"
+- **Interpretation:** Higher score = more explicit language.
+
+### 2. Sexual Content
+- **Score (`filtering_scores.sexual_content.score`):** From `detailed_analysis.maturity_assessment.overall_mature_content_score`.
+- **Label (`filtering_scores.sexual_content.label`):** Based on `overall_mature_content_score`:
+  - 0.0-0.2: "All-Ages"
+  - 0.3-0.4: "Mild Suggestive"
+  - 0.5-0.7: "Explicit Themes"
+  - 0.8-1.0: "Graphic/Heavy Adult"
+- **Interpretation:** Higher score = more sexual content.
+
+### 3. Violence Graphicness
+- **Score (`filtering_scores.violence_graphicness.score`):** From `detailed_analysis.violence_assessment.overall_violence_level_score`.
+- **Label (`filtering_scores.violence_graphicness.label`):** Based on `overall_violence_level_score`:
+  - 0.0-0.2: "Low"
+  - 0.3-0.4: "Mild Conflict"
+  - 0.5-0.7: "Moderate Violence/Threats"
+  - 0.8-1.0: "Graphic/Extreme Threats"
+- **Interpretation:** Higher score = more violence.
+
+### 4. Substance Promotion
+- **Score (`filtering_scores.substance_promotion.score`):** From `detailed_analysis.substance_assessment.overall_substance_glorification_score`.
+- **Label (`filtering_scores.substance_promotion.label`):** Based on `overall_substance_glorification_score`:
+  - 0.0-0.2: "Low"
+  - 0.3-0.4: "Casual Mentions"
+  - 0.5-0.7: "Mild Glorification"
+
+These guidelines define the scales for Vanilla's `detailed_analysis` components.
+
+### Language Assessment (`detailed_analysis.language_assessment`)
+- **Purpose:** Direct measurement of profanity, vulgar language, and offensive terms.
+- **Scores:** `profanity_score` (0-1), `offensive_terms_score` (0-1).
+- **Overall Score (`.overall_explicit_language_score`):** Typically `MAX(profanity_score, offensive_terms_score)`.
+- **Value Range Labels (`.label` derived from `.overall_explicit_language_score`):**
+  - **0.0-0.2:** "Clean" (Clean content, no profanity)
+  - **0.3-0.4:** "Mild" (Mild language, e.g., "hell," "damn")
+  - **0.5-0.7:** "Moderate" (Moderate profanity)
+  - **0.8-1.0:** "Heavy/Frequent" (Heavy/frequent strong profanity)
+- **Contribution:** Feeds `filtering_scores.explicit_language`.
+
+### Maturity Assessment (`detailed_analysis.maturity_assessment`)
+- **Purpose:** Combines sexual references with other mature subject matter.
+- **Scores:** `sexual_content_score` (0-1), `adult_themes_score` (0-1).
+- **Overall Score (`.overall_mature_content_score`):** `MAX(sexual_content_score, adult_themes_score)`.
+- **Value Range Labels (`.label` derived from `.overall_mature_content_score`):**
+  - **0.0-0.2:** "All-Ages" (All-ages appropriate)
+  - **0.3-0.4:** "Mild Suggestive" (Mild suggestive content)
+  - **0.5-0.7:** "Explicit Themes" (Explicit sexual themes or mature topics)
+  - **0.8-1.0:** "Graphic/Heavy Adult" (Graphic sexual content or heavy adult themes)
+- **Contribution:** Feeds `filtering_scores.sexual_content`.
+
+### Violence Assessment (`detailed_analysis.violence_assessment`)
+- **Purpose:** Aggregates various forms of violence.
+- **Individual Scores (e.g., `.physical_violence_score`):** 0.0 - 1.0 each for physical, emotional, self-harm, weapons, threats.
+- **Overall Score (`.overall_violence_level_score`):** `MAX` of all individual violence component scores.
+- **Value Range Labels (`.label` derived from `.overall_violence_level_score`):**
+  - **0.0-0.2:** "Low" (Minimal or no violent content)
+  - **0.3-0.4:** "Mild Conflict" (Mild conflict references)
+  - **0.5-0.7:** "Moderate Violence/Threats" (Moderate violence or threats)
+  - **0.8-1.0:** "Graphic/Extreme Threats" (Graphic violence or extreme threats)
+- **Contribution:** Feeds `filtering_scores.violence_graphicness`.
+
+### Substance Assessment (`detailed_analysis.substance_assessment`)
+- **Purpose:** Focuses on glorification vs. cautionary mentions of substance use.
+- **Scores:** `substance_use_references_score` (0-1), `substance_use_normalization_score` (0-1).
+- **Overall Score (`.overall_substance_glorification_score`):** `MAX(substance_use_references_score, substance_use_normalization_score)`.
+- **Value Range Labels (`.label` derived from `.overall_substance_glorification_score`):**
+  - **0.0-0.2:** "Low" (Minimal or no substance references)
+  - **0.3-0.4:** "Casual Mentions" (Casual mentions without promotion)
+  - **0.5-0.7:** "Mild Glorification" (Regular references or mild glorification)
+  - **0.8-1.0:** "Heavy Glorification" (Heavy glorification, central theme)
+- **Contribution:** Feeds `filtering_scores.substance_promotion`.
+
+### Psychological Risk Assessment (`detailed_analysis.psychological_risk_assessment`)
+- **Purpose:** Measures mental health impact, cognitive distortions, and harmful conditioning potential.
+- **Scores:** 
+    - `cognitive_distortion_average_score` (0-1): Average of all 12 cognitive distortion scores.
+    - `subconscious_reinforcement_risk_score` (0-1).
+    - `behavioral_modeling_risk_score` (0-1).
+    - `self_harm_references_score` (from `violence_assessment`) is also considered.
+- **Overall Score (`.overall_negative_impact_raw_score`):** `MAX(cognitive_distortion_average_score, subconscious_reinforcement_risk_score, behavioral_modeling_risk_score, violence_assessment.self_harm_references_score)`.
+- **Value Range Labels (`.overall_negative_impact_label` derived from `.overall_negative_impact_raw_score`):**
+  - **0.0-0.2:** "Minimal Impact" (Minimal negative impact)
+  - **0.3-0.4:** "Mild Concerning Patterns" (Mild concerning thought patterns)
+  - **0.5-0.7:** "Moderate Distortions/Harmful Messaging" (Moderate cognitive distortions or harmful messaging)
+  - **0.8-1.0:** "Severe Distortions/Dangerous Conditioning" (Severe distortions, dangerous psychological conditioning)
+- **Contribution:** Feeds `filtering_scores.negative_psychological_impact`.
+
+#### Cognitive Distortions (`.cognitive_distortions_raw`)
+- **Individual Scores:** 0.0 - 1.0 for each of the 12 CBT distortions.
+- **Labels for each distortion (0.0-0.3 Low, 0.4-0.6 Moderate, 0.7-1.0 High) can be applied if needed for detailed display.**
+
+### Age Recommendation (`detailed_analysis.general_summary.age_recommendation_details`)
+- **Purpose:** Suggests a minimum age based on overall content.
+- **Output:** `.suggested_min_age_numeric` (e.g., 16) and `.rationale`.
+- **Contribution:** Feeds `filtering_scores.min_age_rating`.
+- **21+:** Heavy substance glorification, extreme violence, or dangerous psychological conditioning
+
+## Usage Instructions
+
+1. Paste song lyrics after this prompt
+2. AI analyzes content objectively using CBT principles
+3. Returns structured JSON data with 5 main filtering metrics
+4. Music player uses filtering_results for user-controlled filtering
+5. Users set slider thresholds for each of the 5 metrics
+6. Songs exceeding user limits are flagged/filtered
+7. Detailed analysis provides context for filtering decisions
+
+**Example Usage:**
+"Analyze these lyrics: [PASTE LYRICS HERE]"

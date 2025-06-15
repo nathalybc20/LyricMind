@@ -1,0 +1,135 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.3,
+        "label": "Mild"
+      },
+      "sexual_content": {
+        "score": 0.2,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.4,
+        "label": "Some Concerning Themes",
+        "interpretation": "The song contains some themes that could potentially have a negative psychological impact, such as rejection and negative self-talk."
+      },
+      "positive_psychological_impact": {
+        "score": 0.3,
+        "label": "Low Developmental Value",
+        "interpretation": "The song has low developmental value, with limited themes supporting positive identity formation, emotional intelligence, or life skills."
+      },
+      "min_age_rating": {
+        "rating_label": "16+",
+        "numeric_value": 16
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.2,
+        "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.3,
+        "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.2,
+        "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.2,
+        "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.2,
+        "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.3,
+        "overall_positive_development_label": "Low"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 0.3,
+        "explicit_language_label": "Mild",
+        "sexual_content_score": 0.2,
+        "sexual_content_label": "Minimal",
+        "violence_graphicness_score": 0.0,
+        "violence_graphicness_label": "Low",
+        "substance_promotion_score": 0.0,
+        "substance_promotion_label": "Low Impact",
+        "overall_risk_factors_score": 0.4,
+        "overall_risk_factors_label": "Some Concerning Themes"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 16,
+        "developmental_stage_appropriateness_label": "mid_adolescence",
+        "rationale_for_age_rating": "The song contains mild explicit language and some themes of rejection and negative self-talk, which may be more suitable for older adolescents."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.2,
+        "authenticity_promotion": 0.3,
+        "diversity_acceptance": 0.2,
+        "growth_mindset": 0.2,
+        "resilience_building": 0.2,
+        "creative_expression": 0.4,
+        "social_consciousness": 0.2
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.3,
+        "healthy_coping_strategies": 0.2,
+        "empathy_development": 0.2,
+        "conflict_resolution": 0.2,
+        "stress_management": 0.2,
+        "emotional_regulation": 0.3
+      },
+      "social_development": {
+        "healthy_boundaries": 0.2,
+        "communication_skills": 0.3,
+        "consent_awareness": 0.2,
+        "friendship_quality": 0.2,
+        "family_relationships": 0.2,
+        "community_connection": 0.2
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 0.0,
+        "toxic_femininity": 0.0,
+        "unrealistic_expectations": 0.4,
+        "materialism_focus": 0.0,
+        "instant_gratification": 0.3,
+        "comparison_culture": 0.3,
+        "authority_rebellion": 0.0,
+        "risky_behavior_glamorization": 0.2
+      },
+      "life_skills_details": {
+        "decision_making": 0.2,
+        "problem_solving": 0.2,
+        "goal_achievement": 0.2,
+        "financial_awareness": 0.0,
+        "academic_motivation": 0.2,
+        "career_exploration": 0.2
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.2,
+        "peer_influence_type_observed": "neutral_observational",
+        "key_conversation_starters": [
+          "How does the song's portrayal of rejection make you feel?",
+          "What are some healthier ways to cope with rejection?",
+          "How can negative self-talk impact our self-esteem and relationships?"
+        ],
+        "identified_growth_opportunities": [
+          "Developing healthier coping strategies for rejection",
+          "Understanding the impact of negative self-talk",
+          "Exploring positive identity formation"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Sabrina Carpenter",
+    "title": "Busy Woman",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 10821491,
+    "track_url": "https://genius.com/Sabrina-carpenter-busy-woman-lyrics"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.3,
+        "label": "Mild"
+      },
+      "sexual_content": {
+        "score": 0.6,
+        "label": "Explicit/Mature"
+      },
+      "violence_graphicness": {
+        "score": 0.1,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.4,
+        "label": "Casual Mentions"
+      },
+      "negative_psychological_impact": {
+        "score": 0.5,
+        "label": "Some Concerning Themes",
+        "interpretation": "Higher score = more negative impact from risk factors"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Developmental Value",
+        "interpretation": "Higher score = more positive developmental value"
+      },
+      "min_age_rating": {
+        "rating_label": "18+",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.2,
+        "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.2,
+        "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.2,
+        "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.2,
+        "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.2,
+        "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.2,
+        "overall_positive_development_label": "Low"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 0.3,
+        "explicit_language_label": "Mild",
+        "sexual_content_score": 0.6,
+        "sexual_content_label": "Explicit/Mature",
+        "violence_graphicness_score": 0.1,
+        "violence_graphicness_label": "Low",
+        "substance_promotion_score": 0.4,
+        "substance_promotion_label": "Casual Mentions",
+        "overall_risk_factors_score": 0.5,
+        "overall_risk_factors_label": "Some Concerning Themes"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 18,
+        "developmental_stage_appropriateness_label": "late_adolescence",
+        "rationale_for_age_rating": "The song contains explicit sexual content, substance promotion, and some explicit language. It may not be suitable for younger audiences."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.2,
+        "authenticity_promotion": 0.2,
+        "diversity_acceptance": 0.2,
+        "growth_mindset": 0.2,
+        "resilience_building": 0.2,
+        "creative_expression": 0.2,
+        "social_consciousness": 0.2
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.2,
+        "healthy_coping_strategies": 0.2,
+        "empathy_development": 0.2,
+        "conflict_resolution": 0.2,
+        "stress_management": 0.2,
+        "emotional_regulation": 0.2
+      },
+      "social_development": {
+        "healthy_boundaries": 0.2,
+        "communication_skills": 0.2,
+        "consent_awareness": 0.2,
+        "friendship_quality": 0.2,
+        "family_relationships": 0.2,
+        "community_connection": 0.2
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 0.3,
+        "toxic_femininity": 0.3,
+        "unrealistic_expectations": 0.4,
+        "materialism_focus": 0.3,
+        "instant_gratification": 0.5,
+        "comparison_culture": 0.3,
+        "authority_rebellion": 0.3,
+        "risky_behavior_glamorization": 0.5
+      },
+      "life_skills_details": {
+        "decision_making": 0.2,
+        "problem_solving": 0.2,
+        "goal_achievement": 0.2,
+        "financial_awareness": 0.2,
+        "academic_motivation": 0.2,
+        "career_exploration": 0.2
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.2,
+        "peer_influence_type_observed": "negative_observational",
+        "key_conversation_starters": [
+          "Discuss the portrayal of relationships in the song and how it differs from healthy relationships.",
+          "Talk about the glamorization of substance use in the song and its potential consequences."
+        ],
+        "identified_growth_opportunities": [
+          "Developing healthy relationship skills",
+          "Understanding the consequences of substance use"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "The Weeknd",
+    "title": "The Hills",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 727466,
+    "track_url": "https://genius.com/The-weeknd-the-hills-lyrics"
+  }
+}

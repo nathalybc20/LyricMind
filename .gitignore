@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# SQLite database file (if you want to keep it local and not in repo)
+# data/lyrics_cache.db  # Uncomment if you prefer DB not to be versioned
+
+# Log files
+data/*.log
+logs/
+*.log
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Local configuration files (if any, for overriding versioned config)
+# config.local.yaml
+real-config.yaml
+
+# Operating System files
+.DS_Store
+Thumbs.db

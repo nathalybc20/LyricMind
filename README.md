@@ -1,0 +1,377 @@
+# Lyrics Analysis System (LyricMind)
+
+LyricMind is a song lyric analysis system. It integrates multiple lyrics providers, utilizes language models for in-depth lyrical analysis, and offers both a Command Line Interface (CLI) and a RESTful API that is designed to be used by music players.
+
+LyricMind performs custom lyrical analysis using portable, text-based 'frameworks'. These frameworks allow you to incorporate insights from various disciplines, such as cognitive psychology (with applications from CBT), literary theory, and communication/media studies. The system is designed for flexibility, making it easy to combine, modify, and share these analytical approaches. This puts you in control, enabling you to experiment freely and define your own metrics for understanding lyrics.
+
+You can measure anything with a series of metrics. This is the core of LyricMind. You can define your own metrics, or use the provided frameworks, to measure song lyrics. A player is a separate project that uses the APIs provided by LyricMind and then implements actions when a song exceeds user defined thresholds. 
+
+A key application of LyricMind is integration with a Spotify player (a separate project) to act as a subconscious firewall for the mind to limit negative effects from reperated lyrics exposure. When a song's lyrical analysis—performed using specialized frameworks such as 'vanilla', 'sage', or 'cinnamon'—exceeds user-defined thresholds, the player can trigger a user-defined action. Actions can include proactively skipping to the next track, removing or replacing the lyrics, or just logging the played song. 
+
+The system includes several pre-defined frameworks for analysis:
+
+- **Vanilla Framework**: Provides a foundational analysis, objectively measuring common sensitive content like explicit language, sexual themes, violence, and substance promotion. It also includes a basic assessment of negative psychological impact based on cognitive distortions, serving as a general-purpose content filter.
+- **Sage Framework**: Specifically designed for young people (ages 12-25), this framework evaluates lyrics for their developmental value. It focuses on themes supporting identity formation, emotional intelligence, and healthy life skills, prioritizing positive youth development while also identifying potentially harmful messaging.
+- **Cinnamon Framework**: Adopts a holistic wellness perspective, analyzing lyrics for their broader emotional, psychological, and developmental impact. It assesses how music might influence overall listener wellbeing, considering both potential risks (e.g., rumination, helplessness) and positive attributes (e.g., empowerment, resilience).
+
+These frameworks utilize various metrics, including:
+
+- **Negative sentiment intensity**: Assesses the average negative sentiment in the lyrics.
+- **Trigger words frequency**: Counts the frequency of specific words or phrases related to anxiety, rumination, or other negative themes.
+- **Repetitive negative lyrical themes**: Identifies recurring negative or harmful lyrical patterns, such as toxic relationships or substance abuse.
+
+These metrics are used to calculate a risk score, which can then be compared to user-defined thresholds to determine if the song should be skipped or logged. This functionality is inspired by Cognitive Behavioral Therapy (CBT) principles, offering users a practical tool to mindfully curate their listening environment and manage exposure to lyrical content that might otherwise impact their mood or thought patterns.
+
+Future plans include the ability to remove or replace lyrics from songs based on the analysis. This would allow users to benefit from the analysis without having to remove the song from their library.
+
+It's easy to make your own framework. No need to code. Just write a text file with your metrics and you're good to go.
+
+
+## Features
+
+- **Multiple Lyrics Providers**: Integrates with Genius, Musixmatch, and Lyrics.ovh to find lyrics.
+- **Caching**: Caches lyrics and analysis results in an SQLite database to improve performance and reduce external API calls.
+- **Configurable LLM Analysis**: Leverages language models (OpenAI, Anthropic, etc) via LangChain for lyrical analysis using customizable frameworks.
+- **Flexible Frameworks**: Supports different analysis perspectives (e.g., thematic, narrative, poetic devices) through simple text-based framework files.
+- **Dual Interface**: Accessible via a powerful CLI for direct interaction and a Flask-based REST API for programmatic access.
+- **Configuration Management**: Centralized configuration via `config.yaml` for API keys, database settings, logging, and provider preferences.
+- **Docker Support**: Includes considerations for efficient Docker deployment, such as model caching and command timeouts.
+
+
+## Research Foundations
+
+LyricMind's innovative approach to lyrical analysis is built upon a robust interdisciplinary foundation, integrating insights from psychology, media studies, and literary analysis. This allows for a nuanced and customizable understanding of lyrical content, moving beyond simplistic keyword spotting or static sentiment analysis.
+
+### Psychological and Cognitive Insights
+
+Extensive research demonstrates the strong influence of lyrical content on emotion, mood, and cognition. Lyrical sentiment is a reliable predictor of how listeners emotionally engage with a song, sometimes even more so than the music itself [(Bhattacharya & Kadambari, 2018)](https://consensus.app/papers/a-multimodal-approach-towards-emotion-recognition-of-bhattacharya-kv/016a077459995e658b63f1381ad9cd63/). Cognitive processing of lyrics has been linked to emotional outcomes, with studies showing that listeners at risk of depression gravitate toward songs with more complex or negative lyrical themes [(Shriram et al., 2021)](https://consensus.app/papers/how-much-do-lyrics-matter-analysing-lyrical-simplicity-shriram-paruchuri/20d909a07dca5703a0f709976323fba0/).
+
+LyricMind incorporates these findings by allowing users to build frameworks inspired by psychological models such as Cognitive Behavioral Therapy (CBT), including metrics that identify cognitive distortions, negative affect, or ruminative language—tools which mirror clinical intervention strategies [(Ko, 2014)](https://consensus.app/papers/lyric-analysis-of-popular-and-original-music-with-ko/2ed41c6a390357f29d30be7f1a26e7a7/).
+
+### Media Effects and Developmental Considerations
+
+Media effects research has long explored how repeated exposure to content—such as themes of violence, despair, or substance abuse—can shape audience beliefs and attitudes over time. Music lyrics are no exception. A 2024 study confirmed that the emotional tone of lyrics has become increasingly negative and repetitive over the past 50 years, especially in pop and hip-hop genres [(Parada-Cabaleiro et al., 2024)](https://consensus.app/papers/song-lyrics-have-become-simpler-and-more-repetitive-over-parada-cabaleiro-mayerl/c9c10c6a4d355791a0e30009482552bc/).
+
+This trend has critical implications for younger listeners. Adolescents are especially susceptible to the influence of music due to their developmental stage, emotional sensitivity, and identity formation processes. LyricMind’s "Sage" framework was designed with this in mind, helping users assess whether songs promote emotional intelligence, reinforce stereotypes, or support healthy psychosocial development.
+
+### Advanced Literary and Linguistic Analysis
+
+LyricMind expands traditional literary analysis by embedding Natural Language Processing (NLP) and Large Language Model (LLM) capabilities into its framework system. Research supports that NLP tools such as SentiWordNet and LIWC can reliably extract emotional and psychological cues from lyrical texts [(Sharma et al., 2016)](https://consensus.app/papers/sentiments-mining-and-classification-of-music-lyrics-sharma-agarwal/3f6fbb24ae1d537a8c05d97f95404152/), [(Xu et al., 2021)](https://consensus.app/papers/using-machine-learning-analysis-to-interpret-the-xu-sun/a1d18d364335507bafad334608a67bd6/).
+
+This allows LyricMind to move beyond simple topic detection and sentiment labeling, enabling users to detect recurring themes—such as toxic relationships or glorified self-harm—and assess their frequency, intensity, and rhetorical framing. Such an approach bridges qualitative interpretation with quantifiable data.
+
+### The LyricMind Distinction: Customizable, Context-Aware Analysis
+
+What sets LyricMind apart is its user-defined, framework-driven model. While most tools rely on static filters or fixed sentiment rules, LyricMind empowers users to define their own metrics using plain-text frameworks. This facilitates context-aware, personalized analysis suitable for use cases ranging from wellness curation and education to therapeutic support and social impact design.
+
+By leveraging large language models to detect nuanced patterns in lyrical language—and aligning this analysis with psychological, literary, and cultural frameworks—LyricMind delivers an advanced toolkit for understanding and managing lyrical influence in a deeply human-centric way.
+
+
+## Project Structure
+
+```
+lyrics-analysis-system/
+├── api/                    # Flask API (routes.py, __init__.py)
+├── cli/                    # Click CLI (main.py, __init__.py)
+├── data/                   # SQLite database storage (e.g., lyrics_cache.db)
+├── frameworks/             # Analysis framework pro    mpt files (e.g., vanilla.txt)
+├── src/
+│   ├── core/               # Core logic (config.py, database.py, discovery.py, analyzer.py)
+│   └── providers/          # Lyrics provider implementations (genius.py, musixmatch.py, etc.)
+├── .gitignore
+├── config.yaml             # Main configuration file
+├── README.md               # This file
+├── requirements.txt        # Python dependencies (to be created)
+├── run_api.py              # Script to run the Flask API server
+└── Dockerfile              # (Optional, for containerization - to be created)
+└── docker-compose.yml      # (Optional, for containerization - to be created)
+```
+
+## Setup
+
+### 1. Prerequisites
+
+- Python 3.8+ recommended.
+- `pip` for package installation.
+
+### 2. Clone the Repository
+
+```bash
+git clone <repository_url> # Replace with your repo URL
+cd lyrics-analysis-system
+```
+
+### 3. Create and Activate a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 4. Install Dependencies
+
+Create a `requirements.txt` file with the following content:
+
+```txt
+# Core
+PyYAML
+SQLAlchemy
+requests
+
+# Langchain & LLM Support (choose based on your LLM provider)
+langchain
+langchain-openai        # If using OpenAI
+langchain-anthropic     # If using Anthropic
+
+
+# API
+Flask
+
+# CLI
+click
+
+# Optional: For development/linting
+# pylint
+# autopep8
+```
+
+Then install them:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Configure the System
+
+Copy the `config.yaml.example` (if provided) to `config.yaml` or create `config.yaml` in the project root. Populate it with your API keys and desired settings:
+
+```yaml
+# config.yaml (Example - fill with your actual values)
+llm:
+  provider: "openai"  # or "anthropic"
+  model_name: "gpt-3.5-turbo"
+  temperature: 0.7
+  # API keys are preferably loaded from environment variables (e.g., OPENAI_API_KEY, ANTHROPIC_API_KEY).
+  # If not found in environment, the system will look for them here.
+  openai_api_key: "YOUR_OPENAI_API_KEY_IF_NOT_IN_ENV" # Optional here if OPENAI_API_KEY env var is set
+  anthropic_api_key: "YOUR_ANTHROPIC_API_KEY_IF_NOT_IN_ENV" # Optional here if ANTHROPIC_API_KEY env var is set
+
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "data/app.log" # Optional: path to log file, relative to project root
+
+lyrics_providers:
+  genius_token: "YOUR_GENIUS_ACCESS_TOKEN"
+  musixmatch_api_key: "YOUR_MUSIXMATCH_API_KEY"
+  # lyrics_ovh is free and requires no key
+  provider_order: ["musixmatch", "genius", "lyrics_ovh"] # Order of preference
+  cache_expiry_days: 30
+  min_lyric_length: 50 # Minimum characters for lyrics to be considered valid
+
+database:
+  url: "sqlite:///data/lyrics_cache.db" # Path to SQLite database file
+
+api:
+  host: "0.0.0.0"
+  port: 5001
+  debug: true
+
+framework_settings:
+  directory: "frameworks" # Relative to project root
+  default_framework: "vanilla"
+```
+
+**Important**: The application will attempt to create the `data/` directory (e.g., for `data/app.log` or `data/lyrics_cache.db`) if it doesn't exist, provided it has the necessary write permissions. If you encounter issues, ensure the parent directory is writable or create `data/` manually.
+
+## Usage
+
+### Command Line Interface (CLI)
+
+The CLI provides direct access to the system's functionalities. Ensure your virtual environment is active and you are in the project root directory.
+
+**General Syntax:**
+`python cli/main.py [OPTIONS] COMMAND [ARGS]...`
+
+**Common Options:**
+- `--config PATH`: Path to `config.yaml` (defaults to `config.yaml` in the current or project root directory).
+- `--log-level [DEBUG|INFO|WARNING|ERROR|CRITICAL]`: Overrides log level from config.
+
+**Commands:**
+
+1.  **Search for Lyrics:**
+    ```bash
+    python cli/main.py search "Artist Name" "Song Title"
+    python cli/main.py search "Eminem" "Kim" --format json --force-refresh
+    ```
+
+    **Search for Lyrics (Docker):**
+    ```bash
+    docker compose run --rm cli search "Eminem" "Kim"
+    ```
+
+2.  **Analyze Lyrics from a File:**
+    Create a file `my_lyrics.txt` with song lyrics.
+    ```bash
+    python cli/main.py analyze my_lyrics.txt
+    python cli/main.py analyze my_lyrics.txt --framework cinnamon --format text 
+    ```
+
+3.  **Search and Analyze a Song:**
+    ```bash
+    python cli/main.py analyze-song "Queen" "Bohemian Rhapsody"
+    python cli/main.py analyze-song "Nirvana" "Smells Like Teen Spirit" --framework sage --format json
+    ```
+
+    **Search and Analyze a Song (Docker):**
+     ```bash
+    docker compose run --rm cli analyze-song Queen" "Bohemian Rhapsody" --framework vanilla
+    ```
+
+4.  **List Available Lyrics Providers:**
+    ```bash
+    python cli/main.py providers
+    ```
+
+5.  **List Available Analysis Frameworks:**
+    ```bash
+    python cli/main.py frameworks
+    ```
+
+6.  **Clear Cache:**
+    ```bash
+    python cli/main.py clear-cache --days 60 # Clear entries older than 60 days
+    ```
+
+7.  **Test LLM Connection:**
+    ```bash
+    python cli/main.py test-llm
+    ```
+
+### REST API
+
+The API provides programmatic access to the system's features.
+
+**1. Run the API Server:**
+
+From the project root directory:
+
+```bash
+python run_api.py
+```
+
+The server will typically start on `http://0.0.0.0:5001` (or as configured in `config.yaml`).
+
+**API Endpoints:**
+
+*   **`GET /api/health`**: Health check for the API.
+    ```bash
+    curl http://localhost:5001/api/health
+    ```
+
+*   **`POST /api/discovery/search`**: Search for lyrics.
+    *   Request Body (JSON):
+        ```json
+        {
+            "artist": "Artist Name",
+            "title": "Song Title",
+            "force_refresh": false
+        }
+        ```
+    *   Example:
+        ```bash
+        curl -X POST -H "Content-Type: application/json" \
+             -d '{"artist": "Coldplay", "title": "Yellow"}' \
+             http://localhost:5001/api/discovery/search
+        ```
+
+*   **`GET /api/discovery/providers`**: List available lyrics providers.
+    ```bash
+    curl http://localhost:5001/api/discovery/providers
+    ```
+
+*   **`POST /api/analyzer/analyze`**: Analyze provided lyrics text.
+    *   Request Body (JSON):
+        ```json
+        {
+            "lyrics": "Your song lyrics text here...",
+            "framework": "vanilla" 
+        }
+        ```
+    *   Example:
+        ```bash
+        curl -X POST -H "Content-Type: application/json" \
+             -d '{"lyrics": "Imagine all the people...", "framework": "vanilla"}' \
+             http://localhost:5001/api/analyzer/analyze
+        ```
+
+*   **`POST /api/analyzer/analyze-song`**: Discover and analyze lyrics for a song.
+    *   Request Body (JSON):
+        ```json
+        {
+            "artist": "Artist Name",
+            "title": "Song Title",
+            "framework": "sage",
+            "force_refresh": false
+        }
+        ```
+    *   Example:
+        ```bash
+        curl -X POST -H "Content-Type: application/json" \
+             -d '{"artist": "Led Zeppelin", "title": "Stairway to Heaven", "framework": "sage"}' \
+             http://localhost:5001/api/analyzer/analyze-song
+        ```
+
+*   **`GET /api/analyzer/frameworks`**: List available analysis frameworks.
+    ```bash
+    curl http://localhost:5001/api/analyzer/frameworks
+    ```
+
+*   **`GET /api/analyzer/frameworks/{framework_name}`**: Get details of a specific analysis framework.
+    *   Example:
+        ```bash
+        curl http://localhost:5001/api/analyzer/frameworks/vanilla
+        ```
+
+*   **`POST /api/cache/clear`**: Clear system cache.
+    *   Request Body (JSON):
+        ```json
+        {
+            "days": 30 
+        }
+        ```
+    *   Example:
+        ```bash
+        curl -X POST -H "Content-Type: application/json" \
+             -d '{"days": 60}' \
+             http://localhost:5001/api/cache/clear
+        ```
+
+## Docker (Containerization)
+
+For easier deployment and consistent environments, Docker can be used.
+
+
+-   **Command Timeouts**: When running commands within a Docker container (e.g., via `docker exec` or in a `Dockerfile` `RUN` instruction), especially for potentially long-running processes like model downloads or complex analyses, use timeout mechanisms to prevent indefinite hanging.
+    -   For `docker exec`, use the `-T` flag for non-interactive mode (if applicable) and consider wrapping your command with the `timeout` utility (e.g., `timeout 60s python cli/main.py ...`).
+    -   Ensure `PYTHONPATH` is correctly set within the Docker environment if your application structure relies on it (e.g., `ENV PYTHONPATH="/app"`).
+
+    A `Dockerfile` and `docker-compose.yml` will be added in future updates to streamline this process.
+
+## Testing
+
+Unit and integration tests will be added to ensure the reliability and correctness of the system. (Details to be added)
+
+## Contributing
+
+Contributions are welcome! Please follow standard practices for pull requests and issue reporting. (Details to be added)
+
+## Roadmap
+
+Spotify lyrics integration. Especially important for Spotify player integration.
+
+Removal and replacement of lyrics based on analysis (would anyone like to contribute with this?).
+
+## License
+
+MIT License. You can use it in commercial projects. Please give attribution if you use it.

@@ -1,0 +1,112 @@
+{
+  "analysis": {
+    "framework_applied": "vanilla",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.4,
+        "label": "Mild"
+      },
+      "sexual_content": {
+        "score": 0.6,
+        "label": "Explicit Themes"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.5,
+        "label": "Mild Glorification"
+      },
+      "negative_psychological_impact": {
+        "score": 0.5,
+        "label": "Moderate Distortions/Harmful Messaging",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.0,
+        "label": "Not Actively Assessed",
+        "interpretation": "Higher score = more positive impact (informational)"
+      },
+      "min_age_rating": {
+        "rating_label": "16+",
+        "numeric_value": 16
+      }
+    },
+    "detailed_analysis": {
+      "language_assessment": {
+        "profanity_score": 0.4,
+        "offensive_terms_score": 0.0,
+        "overall_explicit_language_score": 0.4,
+        "label": "Mild"
+      },
+      "maturity_assessment": {
+        "sexual_content_score": 0.6,
+        "adult_themes_score": 0.0,
+        "overall_mature_content_score": 0.6,
+        "label": "Explicit Themes"
+      },
+      "violence_assessment": {
+        "physical_violence_score": 0.0,
+        "emotional_violence_score": 0.0,
+        "self_harm_references_score": 0.0,
+        "weapon_mentions_score": 0.0,
+        "threats_intimidation_score": 0.0,
+        "overall_violence_level_score": 0.0,
+        "label": "Low"
+      },
+      "substance_assessment": {
+        "substance_use_references_score": 0.5,
+        "substance_use_normalization_score": 0.0,
+        "overall_substance_glorification_score": 0.5,
+        "substances_mentioned": [
+          "decaf"
+        ],
+        "label": "Mild Glorification"
+      },
+      "psychological_risk_assessment": {
+        "cognitive_distortions_raw": {
+          "all_or_nothing_thinking": 0.0,
+          "catastrophizing": 0.0,
+          "personalization": 0.0,
+          "mind_reading": 0.0,
+          "fortune_telling": 0.0,
+          "emotional_reasoning": 0.5,
+          "should_statements": 0.0,
+          "labeling": 0.0,
+          "mental_filter": 0.0,
+          "disqualifying_positive": 0.0,
+          "magnification_minimization": 0.0,
+          "blame_attribution": 0.0
+        },
+        "cognitive_distortion_average_score": 0.04,
+        "subconscious_reinforcement_risk_score": 0.5,
+        "behavioral_modeling_risk_score": 0.5,
+        "overall_negative_impact_raw_score": 0.5,
+        "overall_negative_impact_label": "Moderate Distortions/Harmful Messaging"
+      },
+      "general_summary": {
+        "primary_themes_identified": [
+          "sex",
+          "substance use",
+          "secrecy",
+          "emotional disconnect"
+        ],
+        "overall_emotional_tone": "negative",
+        "content_advisory_notes": "The song contains explicit sexual themes, mild glorification of substance use, and emotional disconnect which may be harmful.",
+        "age_recommendation_details": {
+          "suggested_min_age_numeric": 16,
+          "rationale": "Due to explicit sexual themes and mild glorification of substance use."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "The Weeknd",
+    "title": "The Hills",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 727466,
+    "track_url": "https://genius.com/The-weeknd-the-hills-lyrics"
+  }
+}

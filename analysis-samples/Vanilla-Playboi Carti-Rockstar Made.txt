@@ -1,0 +1,111 @@
+{
+  "analysis": {
+    "framework_applied": "vanilla",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.8,
+        "label": "Heavy/Frequent"
+      },
+      "sexual_content": {
+        "score": 0.4,
+        "label": "Mild Suggestive"
+      },
+      "violence_graphicness": {
+        "score": 0.7,
+        "label": "Moderate Violence/Threats"
+      },
+      "substance_promotion": {
+        "score": 0.6,
+        "label": "Mild Glorification"
+      },
+      "negative_psychological_impact": {
+        "score": 0.6,
+        "label": "Moderate Distortions/Harmful Messaging",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.0,
+        "label": "Not Actively Assessed",
+        "interpretation": "Higher score = more positive impact (informational)"
+      },
+      "min_age_rating": {
+        "rating_label": "18+",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "language_assessment": {
+        "profanity_score": 0.8,
+        "offensive_terms_score": 0.7,
+        "overall_explicit_language_score": 0.8,
+        "label": "Heavy/Frequent"
+      },
+      "maturity_assessment": {
+        "sexual_content_score": 0.4,
+        "adult_themes_score": 0.3,
+        "overall_mature_content_score": 0.4,
+        "label": "Mild Suggestive"
+      },
+      "violence_assessment": {
+        "physical_violence_score": 0.6,
+        "emotional_violence_score": 0.5,
+        "self_harm_references_score": 0.0,
+        "weapon_mentions_score": 0.0,
+        "threats_intimidation_score": 0.7,
+        "overall_violence_level_score": 0.7,
+        "label": "Moderate Violence/Threats"
+      },
+      "substance_assessment": {
+        "substance_use_references_score": 0.6,
+        "substance_use_normalization_score": 0.6,
+        "overall_substance_glorification_score": 0.6,
+        "substances_mentioned": [
+          "drink"
+        ],
+        "label": "Mild Glorification"
+      },
+      "psychological_risk_assessment": {
+        "cognitive_distortions_raw": {
+          "all_or_nothing_thinking": 0.0,
+          "catastrophizing": 0.0,
+          "personalization": 0.0,
+          "mind_reading": 0.0,
+          "fortune_telling": 0.0,
+          "emotional_reasoning": 0.0,
+          "should_statements": 0.0,
+          "labeling": 0.0,
+          "mental_filter": 0.0,
+          "disqualifying_positive": 0.0,
+          "magnification_minimization": 0.0,
+          "blame_attribution": 0.0
+        },
+        "cognitive_distortion_average_score": 0.0,
+        "subconscious_reinforcement_risk_score": 0.6,
+        "behavioral_modeling_risk_score": 0.6,
+        "overall_negative_impact_raw_score": 0.6,
+        "overall_negative_impact_label": "Moderate Distortions/Harmful Messaging"
+      },
+      "general_summary": {
+        "primary_themes_identified": [
+          "violence",
+          "substance use",
+          "explicit language"
+        ],
+        "overall_emotional_tone": "aggressive",
+        "content_advisory_notes": "Contains explicit language, violence, and substance use references.",
+        "age_recommendation_details": {
+          "suggested_min_age_numeric": 18,
+          "rationale": "Due to explicit language, violence, and substance use references."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Playboi Carti",
+    "title": "Rockstar Made",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 6303402,
+    "track_url": "https://genius.com/Playboi-carti-rockstar-made-lyrics"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "sexual_content": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Risk",
+        "interpretation": "Higher score = more negative impact from risk factors"
+      },
+      "positive_psychological_impact": {
+        "score": 0.6,
+        "label": "Moderate Developmental Value",
+        "interpretation": "Higher score = more positive developmental value"
+      },
+      "min_age_rating": {
+        "rating_label": "14+",
+        "numeric_value": 14
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.5,
+        "identity_support_label": "Moderate",
+        "emotional_intelligence_score": 0.5,
+        "emotional_intelligence_label": "Moderate",
+        "relationship_modeling_score": 0.5,
+        "relationship_modeling_label": "Moderate",
+        "future_orientation_score": 0.6,
+        "future_orientation_label": "Moderate",
+        "life_skills_enhancement_score": 0.6,
+        "life_skills_enhancement_label": "Moderate",
+        "overall_positive_development_score": 0.6,
+        "overall_positive_development_label": "Moderate"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 0.0,
+        "explicit_language_label": "Minimal",
+        "sexual_content_score": 0.0,
+        "sexual_content_label": "Minimal",
+        "violence_graphicness_score": 0.0,
+        "violence_graphicness_label": "Low",
+        "substance_promotion_score": 0.0,
+        "substance_promotion_label": "Low Impact",
+        "overall_risk_factors_score": 0.2,
+        "overall_risk_factors_label": "Low Risk"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 14,
+        "developmental_stage_appropriateness_label": "mid_adolescence",
+        "rationale_for_age_rating": "The song lyrics are metaphorical and may require a certain level of maturity to understand. There are no explicit themes, making it suitable for mid-adolescents."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.5,
+        "authenticity_promotion": 0.5,
+        "diversity_acceptance": 0.5,
+        "growth_mindset": 0.6,
+        "resilience_building": 0.6,
+        "creative_expression": 0.6,
+        "social_consciousness": 0.5
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.5,
+        "healthy_coping_strategies": 0.5,
+        "empathy_development": 0.5,
+        "conflict_resolution": 0.5,
+        "stress_management": 0.5,
+        "emotional_regulation": 0.5
+      },
+      "social_development": {
+        "healthy_boundaries": 0.5,
+        "communication_skills": 0.5,
+        "consent_awareness": 0.5,
+        "friendship_quality": 0.5,
+        "family_relationships": 0.5,
+        "community_connection": 0.5
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 0.0,
+        "toxic_femininity": 0.0,
+        "unrealistic_expectations": 0.2,
+        "materialism_focus": 0.0,
+        "instant_gratification": 0.0,
+        "comparison_culture": 0.2,
+        "authority_rebellion": 0.0,
+        "risky_behavior_glamorization": 0.0
+      },
+      "life_skills_details": {
+        "decision_making": 0.6,
+        "problem_solving": 0.6,
+        "goal_achievement": 0.6,
+        "financial_awareness": 0.5,
+        "academic_motivation": 0.5,
+        "career_exploration": 0.5
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.5,
+        "peer_influence_type_observed": "neutral_observational",
+        "key_conversation_starters": [
+          "The metaphorical meaning of the lyrics",
+          "The concept of resilience as depicted in the song"
+        ],
+        "identified_growth_opportunities": [
+          "Understanding metaphorical language",
+          "Discussing the concept of resilience"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Dio",
+    "title": "Holy Diver",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 433697,
+    "track_url": "https://genius.com/Dio-holy-diver-lyrics"
+  }
+}

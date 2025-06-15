@@ -1,0 +1,111 @@
+{
+  "analysis": {
+    "framework_applied": "vanilla",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.8,
+        "label": "Heavy/Frequent"
+      },
+      "sexual_content": {
+        "score": 0.9,
+        "label": "Graphic/Heavy Adult"
+      },
+      "violence_graphicness": {
+        "score": 0.2,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.3,
+        "label": "Casual Mentions"
+      },
+      "negative_psychological_impact": {
+        "score": 0.6,
+        "label": "Moderate Distortions/Harmful Messaging",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Not Actively Assessed",
+        "interpretation": "Higher score = more positive impact (informational)"
+      },
+      "min_age_rating": {
+        "rating_label": "18+",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "language_assessment": {
+        "profanity_score": 0.8,
+        "offensive_terms_score": 0.7,
+        "overall_explicit_language_score": 0.8,
+        "label": "Heavy/Frequent"
+      },
+      "maturity_assessment": {
+        "sexual_content_score": 0.9,
+        "adult_themes_score": 0.8,
+        "overall_mature_content_score": 0.9,
+        "label": "Graphic/Heavy Adult"
+      },
+      "violence_assessment": {
+        "physical_violence_score": 0.2,
+        "emotional_violence_score": 0.1,
+        "self_harm_references_score": 0.0,
+        "weapon_mentions_score": 0.0,
+        "threats_intimidation_score": 0.2,
+        "overall_violence_level_score": 0.2,
+        "label": "Low"
+      },
+      "substance_assessment": {
+        "substance_use_references_score": 0.3,
+        "substance_use_normalization_score": 0.2,
+        "overall_substance_glorification_score": 0.3,
+        "substances_mentioned": [
+          "alcohol"
+        ],
+        "label": "Casual Mentions"
+      },
+      "psychological_risk_assessment": {
+        "cognitive_distortions_raw": {
+          "all_or_nothing_thinking": 0.3,
+          "catastrophizing": 0.2,
+          "personalization": 0.4,
+          "mind_reading": 0.1,
+          "fortune_telling": 0.2,
+          "emotional_reasoning": 0.5,
+          "should_statements": 0.3,
+          "labeling": 0.4,
+          "mental_filter": 0.2,
+          "disqualifying_positive": 0.1,
+          "magnification_minimization": 0.3,
+          "blame_attribution": 0.2
+        },
+        "cognitive_distortion_average_score": 0.3,
+        "subconscious_reinforcement_risk_score": 0.6,
+        "behavioral_modeling_risk_score": 0.5,
+        "overall_negative_impact_raw_score": 0.6,
+        "overall_negative_impact_label": "Moderate Distortions/Harmful Messaging"
+      },
+      "general_summary": {
+        "primary_themes_identified": [
+          "Sexuality",
+          "Body Image",
+          "Substance Use"
+        ],
+        "overall_emotional_tone": "aggressive",
+        "content_advisory_notes": "Contains explicit language, sexual content, and body shaming.",
+        "age_recommendation_details": {
+          "suggested_min_age_numeric": 18,
+          "rationale": "Due to explicit sexual content, strong language, and mature themes."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Nicky Minage",
+    "title": "Anaconda",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 483960,
+    "track_url": "https://genius.com/Nicki-minaj-anaconda-lyrics"
+  }
+}

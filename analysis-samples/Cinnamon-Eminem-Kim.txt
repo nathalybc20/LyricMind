@@ -1,0 +1,64 @@
+{
+  "analysis": {
+    "filtering_results": {
+      "psychological_safety": 0.1,
+      "negativity_toxicity": 0.9,
+      "empowerment_level": -0.9,
+      "intimacy_content": 0.2,
+      "developmental_appropriateness": "adult"
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": 0.9,
+        "substance_messaging": 0.2,
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility": 0.9,
+          "relational_toxicity": 0.9,
+          "self_destructive_themes": 0.8,
+          "power_dynamics": 0.9,
+          "trauma_references": 0.8
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": 0.8,
+        "helplessness_messaging": 0.7,
+        "identity_rigidity": 0.6,
+        "social_comparison": 0.4,
+        "catastrophic_outlook": 0.9,
+        "perfectionism": 0.3,
+        "victimhood_narrative": 0.8,
+        "grandiosity": 0.7,
+        "attachment_insecurity": 0.9
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "betrayal",
+          "revenge",
+          "violence"
+        ],
+        "emotional_journey": "Escalating anger and resentment leading to violent climax",
+        "message_reinforcement": 0.9,
+        "lyrical_sophistication": 0.7
+      },
+      "wellness_summary": {
+        "growth_potential": 0.1,
+        "trigger_warnings": [
+          "domestic violence",
+          "murder",
+          "verbal abuse",
+          "suicide"
+        ],
+        "therapeutic_considerations": "Highly triggering content; not recommended for individuals with trauma history or emotional regulation challenges"
+      }
+    }
+  },
+  "metadata": {
+    "artist": "eminem",
+    "title": "kim",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 1401,
+    "track_url": "https://genius.com/Eminem-kim-lyrics"
+  }
+}

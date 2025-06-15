@@ -1,0 +1,137 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "sexual_content": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.0,
+        "label": "Low Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.9,
+        "label": "High Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "all",
+        "numeric_value": 0
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.0,
+          "label": "Neutral"
+        },
+        "substance_messaging": {
+          "score": 0.0,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.0,
+          "relational_toxicity_score": 0.0,
+          "self_destructive_themes_score": 0.0,
+          "power_dynamics_score": 0.0,
+          "trauma_references_score": 0.0,
+          "overall_aggression_score": 0.0,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.0,
+          "label": "Minimal"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "helplessness_messaging": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "identity_rigidity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "social_comparison": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "catastrophic_outlook": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "grandiosity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "attachment_insecurity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "overall_negative_patterns_score": 0.0,
+        "label_negative_patterns": "Low"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.9,
+        "resilience_promotion_score": 0.9,
+        "growth_potential_score": 0.8,
+        "overall_positive_attributes_score": 0.9,
+        "label_positive_attributes": "High"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Love",
+          "Gratitude",
+          "Positivity"
+        ],
+        "emotional_journey_description": "The song narrates a journey from a place of pain and darkness to one of joy and light, brought about by the presence of a loved one, 'Sunny'. The lyrics express gratitude and love towards this person.",
+        "message_reinforcement_clarity_score": 0.9,
+        "lyrical_sophistication_score": 0.7
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song is overwhelmingly positive, with a strong focus on gratitude, love, and the transformative power of positive relationships. It is likely to have a positive psychological impact on listeners of all ages.",
+        "therapeutic_considerations": "This song could be used in therapeutic contexts to discuss the power of positive relationships and the importance of expressing gratitude.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "all",
+          "numeric_min_age": 0,
+          "rationale_for_assessment": "The song's themes are universally relatable and appropriate for all ages."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Bobby Hebb",
+    "title": "sunny",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 164516,
+    "track_url": "https://genius.com/Bobby-hebb-sunny-lyrics"
+  }
+}

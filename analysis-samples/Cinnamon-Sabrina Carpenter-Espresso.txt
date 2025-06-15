@@ -1,0 +1,134 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.1,
+        "label": "Low Impact"
+      },
+      "sexual_content": {
+        "score": 0.3,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.1,
+        "label": "Low Negative Impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.5,
+        "label": "Moderate Positive Impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adolescence",
+        "numeric_value": 13
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.1,
+          "label": "Neutral"
+        },
+        "substance_messaging": {
+          "score": 0.0,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.0,
+          "relational_toxicity_score": 0.0,
+          "self_destructive_themes_score": 0.0,
+          "power_dynamics_score": 0.0,
+          "trauma_references_score": 0.0,
+          "overall_aggression_score": 0.0,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.3,
+          "label": "Minimal"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.1,
+          "label": "Low"
+        },
+        "helplessness_messaging": {
+          "score": 0.1,
+          "label": "Low"
+        },
+        "identity_rigidity": {
+          "score": 0.1,
+          "label": "Low"
+        },
+        "social_comparison": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "catastrophic_outlook": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "grandiosity": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "attachment_insecurity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "overall_negative_patterns_score": 0.1,
+        "label_negative_patterns": "Low"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.4,
+        "resilience_promotion_score": 0.5,
+        "growth_potential_score": 0.6,
+        "overall_positive_attributes_score": 0.5,
+        "label_positive_attributes": "Moderate"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Self-confidence",
+          "Attraction"
+        ],
+        "emotional_journey_description": "The song portrays a confident and playful narrative where the singer likens herself to an espresso, keeping her partner awake and interested.",
+        "message_reinforcement_clarity_score": 0.8,
+        "lyrical_sophistication_score": 0.6
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song promotes self-confidence and playful attraction, with minimal explicit content. It's suitable for a wide audience, but some themes may be more appropriate for adolescents and above.",
+        "therapeutic_considerations": "The song's upbeat and confident tone could be used to foster self-esteem and positive mood.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adolescence",
+          "numeric_min_age": 13,
+          "rationale_for_assessment": "The song's themes of attraction and playful flirtation are more suitable for an adolescent audience."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Sabrina Carpenter",
+    "title": "Espresso",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 10257779,
+    "track_url": "https://genius.com/Sabrina-carpenter-espresso-lyrics"
+  }
+}

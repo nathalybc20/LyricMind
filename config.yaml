@@ -1,0 +1,36 @@
+# LLM Configuration (LangChain compatible)
+llm:
+  provider: "openai"  # openai, anthropic, ollama, etc.
+  model: "gpt-4"
+  temperature: 0.2
+  timeout_seconds: 120
+  max_retries: 2
+  # Provider-specific config
+  openai_api_key: "insert-your-key-here"
+  anthropic_api_key: null
+  ollama_base_url: "http://localhost:11434"
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: null
+
+# Lyrics Providers
+providers:
+  genius_token: "insert-your-key-here"
+  musixmatch_api_key: null  # Optional
+
+# Database
+database:
+  url: "sqlite:///data/lyrics_system.db"
+
+# API
+api:
+  host: "0.0.0.0"
+  port: 5001
+  debug: false
+
+# Framework
+framework:
+  directory: "frameworks"
+  default: "vanilla"

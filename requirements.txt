@@ -1,0 +1,23 @@
+# Core
+PyYAML
+SQLAlchemy
+requests
+lyricsgenius
+
+# Langchain & LLM Support
+# Choose and uncomment based on your LLM provider(s)
+langchain
+langchain-openai
+langchain-anthropic
+langchain-community # For HuggingFace and other community integrations
+
+# API
+Flask
+flasgger # For Swagger/OpenAPI documentation
+
+# CLI
+click
+
+# Testing
+pytest
+pytest-cov

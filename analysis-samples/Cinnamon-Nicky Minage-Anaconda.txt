@@ -1,0 +1,137 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.8,
+        "label": "High/Aggressive or Diminishing"
+      },
+      "sexual_content": {
+        "score": 0.9,
+        "label": "High/Explicit"
+      },
+      "violence_graphicness": {
+        "score": 0.2,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.3,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.5,
+        "label": "Moderate Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adult",
+        "numeric_value": 21
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.8,
+          "label": "Aggressive/Diminishing"
+        },
+        "substance_messaging": {
+          "score": 0.3,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.2,
+          "relational_toxicity_score": 0.6,
+          "self_destructive_themes_score": 0.2,
+          "power_dynamics_score": 0.7,
+          "trauma_references_score": 0.1,
+          "overall_aggression_score": 0.2,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.9,
+          "label": "High/Explicit"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "helplessness_messaging": {
+          "score": 0.4,
+          "label": "Low"
+        },
+        "identity_rigidity": {
+          "score": 0.6,
+          "label": "Moderate"
+        },
+        "social_comparison": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "catastrophic_outlook": {
+          "score": 0.3,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.4,
+          "label": "Low"
+        },
+        "grandiosity": {
+          "score": 0.6,
+          "label": "Moderate"
+        },
+        "attachment_insecurity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "overall_negative_patterns_score": 0.5,
+        "label_negative_patterns": "Moderate"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.2,
+        "resilience_promotion_score": 0.3,
+        "growth_potential_score": 0.1,
+        "overall_positive_attributes_score": 0.2,
+        "label_positive_attributes": "Low"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Body Positivity",
+          "Sexual Empowerment",
+          "Materialism"
+        ],
+        "emotional_journey_description": "The song maintains a consistent tone of sexual empowerment and body positivity, with a focus on material wealth and status.",
+        "message_reinforcement_clarity_score": 0.8,
+        "lyrical_sophistication_score": 0.4
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains explicit sexual content and strong language. It promotes body positivity but also includes elements of materialism and power dynamics. The song may not be suitable for younger audiences due to its explicit content.",
+        "therapeutic_considerations": "Could be used in discussions about body positivity, self-esteem, and the impact of societal standards on self-perception. However, caution is advised due to explicit content.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adult",
+          "numeric_min_age": 21,
+          "rationale_for_assessment": "The explicit sexual content, strong language, and mature themes make this song more suitable for adult audiences."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Nicky Minage",
+    "title": "Anaconda",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 483960,
+    "track_url": "https://genius.com/Nicki-minaj-anaconda-lyrics"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 1.0,
+        "label": "Moderate to Strong"
+      },
+      "sexual_content": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 1.0,
+        "label": "Moderate to Graphic Violence"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 1.0,
+        "label": "Significant Risk Factors Present",
+        "interpretation": "Higher score = more negative impact from risk factors"
+      },
+      "positive_psychological_impact": {
+        "score": 0.0,
+        "label": "Low Developmental Value",
+        "interpretation": "Higher score = more positive developmental value"
+      },
+      "min_age_rating": {
+        "rating_label": "young_adult",
+        "numeric_value": 21
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.0,
+        "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.0,
+        "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.0,
+        "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.0,
+        "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.0,
+        "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.0,
+        "overall_positive_development_label": "Low"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 1.0,
+        "explicit_language_label": "Moderate to Strong",
+        "sexual_content_score": 0.0,
+        "sexual_content_label": "Minimal",
+        "violence_graphicness_score": 1.0,
+        "violence_graphicness_label": "Moderate to Graphic Violence",
+        "substance_promotion_score": 0.0,
+        "substance_promotion_label": "Low Impact",
+        "overall_risk_factors_score": 1.0,
+        "overall_risk_factors_label": "Significant Risk Factors Present"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 21,
+        "developmental_stage_appropriateness_label": "young_adult",
+        "rationale_for_age_rating": "The song contains explicit language, graphic violence, and negative psychological impact, which are not suitable for young listeners."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.0,
+        "authenticity_promotion": 0.0,
+        "diversity_acceptance": 0.0,
+        "growth_mindset": 0.0,
+        "resilience_building": 0.0,
+        "creative_expression": 0.0,
+        "social_consciousness": 0.0
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.0,
+        "healthy_coping_strategies": 0.0,
+        "empathy_development": 0.0,
+        "conflict_resolution": 0.0,
+        "stress_management": 0.0,
+        "emotional_regulation": 0.0
+      },
+      "social_development": {
+        "healthy_boundaries": 0.0,
+        "communication_skills": 0.0,
+        "consent_awareness": 0.0,
+        "friendship_quality": 0.0,
+        "family_relationships": 0.0,
+        "community_connection": 0.0
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 1.0,
+        "toxic_femininity": 0.0,
+        "unrealistic_expectations": 0.0,
+        "materialism_focus": 0.0,
+        "instant_gratification": 0.0,
+        "comparison_culture": 0.0,
+        "authority_rebellion": 1.0,
+        "risky_behavior_glamorization": 1.0
+      },
+      "life_skills_details": {
+        "decision_making": 0.0,
+        "problem_solving": 0.0,
+        "goal_achievement": 0.0,
+        "financial_awareness": 0.0,
+        "academic_motivation": 0.0,
+        "career_exploration": 0.0
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.0,
+        "peer_influence_type_observed": "negative_influence",
+        "key_conversation_starters": [
+          "Discussing the importance of healthy relationships",
+          "Understanding the impact of violence and aggression",
+          "Recognizing the importance of respectful communication"
+        ],
+        "identified_growth_opportunities": [
+          "Promoting empathy and understanding",
+          "Encouraging non-violent conflict resolution",
+          "Building emotional intelligence"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "eminem",
+    "title": "kim",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 1401,
+    "track_url": "https://genius.com/Eminem-kim-lyrics"
+  }
+}

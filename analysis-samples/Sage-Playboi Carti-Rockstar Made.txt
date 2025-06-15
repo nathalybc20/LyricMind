@@ -1,0 +1,135 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.8,
+        "label": "Moderate to Strong"
+      },
+      "sexual_content": {
+        "score": 0.6,
+        "label": "Explicit/Mature"
+      },
+      "violence_graphicness": {
+        "score": 0.7,
+        "label": "Moderate to Graphic Violence"
+      },
+      "substance_promotion": {
+        "score": 0.6,
+        "label": "Normalization to Glorification"
+      },
+      "negative_psychological_impact": {
+        "score": 0.9,
+        "label": "Significant Risk Factors Present",
+        "interpretation": "Higher score = more negative impact from risk factors"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Developmental Value",
+        "interpretation": "Higher score = more positive developmental value"
+      },
+      "min_age_rating": {
+        "rating_label": "18+",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.2,
+        "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.1,
+        "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.1,
+        "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.2,
+        "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.1,
+        "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.2,
+        "overall_positive_development_label": "Low"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 0.8,
+        "explicit_language_label": "Moderate to Strong",
+        "sexual_content_score": 0.6,
+        "sexual_content_label": "Explicit/Mature",
+        "violence_graphicness_score": 0.7,
+        "violence_graphicness_label": "Moderate to Graphic Violence",
+        "substance_promotion_score": 0.6,
+        "substance_promotion_label": "Normalization to Glorification",
+        "overall_risk_factors_score": 0.9,
+        "overall_risk_factors_label": "Significant Risk Factors Present"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 18,
+        "developmental_stage_appropriateness_label": "late_adolescence",
+        "rationale_for_age_rating": "The song contains explicit language, sexual content, violence, and substance promotion which are not suitable for younger audiences."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.2,
+        "authenticity_promotion": 0.2,
+        "diversity_acceptance": 0.1,
+        "growth_mindset": 0.1,
+        "resilience_building": 0.1,
+        "creative_expression": 0.3,
+        "social_consciousness": 0.1
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.1,
+        "healthy_coping_strategies": 0.1,
+        "empathy_development": 0.1,
+        "conflict_resolution": 0.1,
+        "stress_management": 0.1,
+        "emotional_regulation": 0.1
+      },
+      "social_development": {
+        "healthy_boundaries": 0.1,
+        "communication_skills": 0.1,
+        "consent_awareness": 0.1,
+        "friendship_quality": 0.1,
+        "family_relationships": 0.1,
+        "community_connection": 0.1
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 0.7,
+        "toxic_femininity": 0.1,
+        "unrealistic_expectations": 0.5,
+        "materialism_focus": 0.6,
+        "instant_gratification": 0.8,
+        "comparison_culture": 0.6,
+        "authority_rebellion": 0.7,
+        "risky_behavior_glamorization": 0.9
+      },
+      "life_skills_details": {
+        "decision_making": 0.1,
+        "problem_solving": 0.1,
+        "goal_achievement": 0.1,
+        "financial_awareness": 0.2,
+        "academic_motivation": 0.1,
+        "career_exploration": 0.1
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.1,
+        "peer_influence_type_observed": "negative_influence",
+        "key_conversation_starters": [
+          "The portrayal of violence and substance use in the song",
+          "The explicit language and sexual content",
+          "The glamorization of risky behaviors"
+        ],
+        "identified_growth_opportunities": [
+          "Promoting healthier coping strategies",
+          "Understanding the impact of explicit language and content",
+          "Discussing the consequences of risky behaviors"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Playboi Carti",
+    "title": "Rockstar Made",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 6303402,
+    "track_url": "https://genius.com/Playboi-carti-rockstar-made-lyrics"
+  }
+}

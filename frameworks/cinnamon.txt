@@ -1,0 +1,346 @@
+# Cinnamon Music Lyrics Analysis Framework
+# Version: 1.0
+# Updated: 2025-05-24
+# Changes: Initial version
+
+
+**Instructions for AI Analysis:**
+Analyze song lyrics through a holistic wellness lens, evaluating content for emotional, psychological, and developmental impact. Do not reproduce copyrighted lyrics in your response. Focus on nuanced assessment of how musical content might influence listener wellbeing across multiple dimensions.
+
+## FILTERING_METRICS (For Music Player Integration)
+
+```json
+{
+  "framework_name": "cinnamon",
+  "description": "The Cinnamon framework analyzes song lyrics through a holistic wellness lens. It evaluates content for emotional, psychological, and developmental impact, aiming to identify how music might influence listener wellbeing across multiple dimensions, including both potential risks and positive attributes.",
+  "color_hex": "#D27D2D",
+  "filtering_thresholds": {
+    "explicit_language": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.5,
+      "description": "Level of profanity and potentially harmful language. Higher scores indicate more explicit or impactful language.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low Impact"},
+        {"range": [0.4, 0.6], "label": "Moderate/Emotionally Charged"},
+        {"range": [0.7, 1.0], "label": "High/Aggressive or Diminishing"}
+      ],
+      "interpretation_note": "Higher score = more explicit language. Songs ABOVE threshold are filtered."
+    },
+    "sexual_content": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.7,
+      "description": "Level of sexual or intimate content. Higher scores indicate more explicit or mature intimate themes.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Minimal"},
+        {"range": [0.4, 0.6], "label": "Moderate/Suggestive"},
+        {"range": [0.7, 1.0], "label": "High/Explicit"}
+      ],
+      "interpretation_note": "Higher score = more sexual content. Songs ABOVE threshold are filtered."
+    },
+    "violence_graphicness": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Level of aggression, hostility, or violent themes. Higher scores indicate more graphic or impactful violence.",
+       "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low"},
+        {"range": [0.4, 0.6], "label": "Moderate/Implied"},
+        {"range": [0.7, 1.0], "label": "High/Graphic"}
+      ],
+      "interpretation_note": "Higher score = more violence. Songs ABOVE threshold are filtered."
+    },
+    "substance_promotion": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Level of substance use portrayal, focusing on promotion or normalization. Higher scores indicate more promotion.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low Impact"},
+        {"range": [0.4, 0.6], "label": "Moderate/Normalized"},
+        {"range": [0.7, 1.0], "label": "High/Glorified"}
+      ],
+      "interpretation_note": "Higher score = more substance promotion. Songs ABOVE threshold are filtered."
+    },
+    "negative_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.6,
+      "description": "Potential for inducing negative psychological states (e.g., rumination, helplessness). Higher scores indicate greater negative impact.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low Negative Impact"},
+        {"range": [0.4, 0.6], "label": "Moderate Negative Impact"},
+        {"range": [0.7, 1.0], "label": "High Negative Impact"}
+      ],
+      "interpretation_note": "Higher score = MORE negative psychological impact. Songs ABOVE threshold are filtered."
+    },
+    "positive_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.3,
+      "description": "Potential for fostering positive psychological states (e.g., empowerment, resilience). Higher scores indicate greater positive impact.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low Positive Impact"},
+        {"range": [0.4, 0.6], "label": "Moderate Positive Impact"},
+        {"range": [0.7, 1.0], "label": "High Positive Impact"}
+      ],
+      "interpretation_note": "Higher score = MORE positive psychological impact. Songs BELOW threshold are filtered (i.e., user wants songs with at least this much positive impact)."
+    },
+    "min_age_rating_filter": {
+      "type": "dropdown",
+      "options_map": {
+          "all": 0, "early_childhood": 3, "middle_childhood": 9,
+          "adolescence": 13, "young_adult": 18, "adult": 21
+      },
+      "options_display": ["all", "early_childhood (3+)", "middle_childhood (9+)", "adolescence (13+)", "young_adult (18+)", "adult (21+)"],
+      "default": "adolescence",
+      "description": "Minimum developmental stage. Filters songs rated for an older audience than selected."
+    }
+  }
+}
+```
+
+## Analysis Template (JSON Format for AI Output)
+
+This is the structure the AI should return when using the Cinnamon framework.
+
+```json
+{
+  "framework_applied": "cinnamon",
+  "filtering_scores": {
+    "explicit_language": { 
+      "score": 0.0,
+      "label": "Low Impact"
+    },
+    "sexual_content": { 
+      "score": 0.0, 
+      "label": "Minimal"
+    },
+    "violence_graphicness": { 
+      "score": 0.0, 
+      "label": "Low"
+    },
+    "substance_promotion": { 
+      "score": 0.0, 
+      "label": "Low Impact"
+    },
+    "negative_psychological_impact": {
+      "score": 0.0, 
+      "label": "Low Negative Impact", 
+      "interpretation": "Higher score = more negative impact"
+    },
+    "positive_psychological_impact": {
+      "score": 0.0, 
+      "label": "Low Positive Impact", 
+      "interpretation": "Higher score = more positive impact"
+    },
+    "min_age_rating": {
+        "rating_label": "adolescence",
+        "numeric_value": 13
+    }
+  },
+  "detailed_analysis": { 
+    "content_wellness": {
+      "language_impact": {
+        "score": 0.0,
+        "label": "Neutral"
+      },
+      "substance_messaging": {
+        "score": 0.0,
+        "label": "Low Risk"
+      },
+      "substances_mentioned": [],
+      "aggression_spectrum": {
+        "physical_hostility_score": 0.0,
+        "relational_toxicity_score": 0.0,
+        "self_destructive_themes_score": 0.0,
+        "power_dynamics_score": 0.0,
+        "trauma_references_score": 0.0,
+        "overall_aggression_score": 0.0,
+        "label": "Low"
+      },
+      "intimacy_depiction": {
+          "score": 0.0,
+          "label": "Minimal"
+      }
+    },
+    "psychological_patterns": {
+      "rumination_tendency": {"score": 0.0, "label": "Low"},
+      "helplessness_messaging": {"score": 0.0, "label": "Low"},
+      "identity_rigidity": {"score": 0.0, "label": "Low"},
+      "social_comparison": {"score": 0.0, "label": "Low"},
+      "catastrophic_outlook": {"score": 0.0, "label": "Low"},
+      "perfectionism": {"score": 0.0, "label": "Low"},
+      "victimhood_narrative": {"score": 0.0, "label": "Low"},
+      "grandiosity": {"score": 0.0, "label": "Low"},
+      "attachment_insecurity": {"score": 0.0, "label": "Low"},
+      "overall_negative_patterns_score": 0.0,
+      "label_negative_patterns": "Low"
+    },
+    "positive_attributes": {
+        "empowerment_score": 0.0,
+        "resilience_promotion_score": 0.0,
+        "growth_potential_score": 0.0,
+        "overall_positive_attributes_score": 0.0,
+        "label_positive_attributes": "Low"
+    },
+    "narrative_analysis": {
+      "dominant_themes": [],
+      "emotional_journey_description": "",
+      "message_reinforcement_clarity_score": 0.0,
+      "lyrical_sophistication_score": 0.0
+    },
+    "wellness_summary": {
+      "key_observations_and_warnings": "",
+      "therapeutic_considerations": "",
+      "developmental_stage_assessment": {
+          "assessed_stage_label": "adolescence",
+          "numeric_min_age": 13,
+          "rationale_for_assessment": ""
+      }
+    }
+  }
+}
+```
+
+## Filtering Metrics Calculation (for AI Output Generation)
+
+The AI will populate the `filtering_scores` block in its JSON output. Here's how these common scores (and their sub-field `label`) are derived from Cinnamon's `detailed_analysis` components:
+
+### 1. Explicit Language
+- **Score (`filtering_scores.explicit_language.score`):** Directly from `detailed_analysis.content_wellness.language_impact.score`.
+- **Label (`filtering_scores.explicit_language.label`):** Based on `language_impact.score`:
+  - 0.0-0.3: "Low Impact"
+  - 0.4-0.6: "Moderate/Charged"
+  - 0.7-1.0: "High/Aggressive"
+- **Interpretation:** Higher score = more explicit or impactful language.
+
+### 2. Sexual Content
+- **Score (`filtering_scores.sexual_content.score`):** Directly from `detailed_analysis.content_wellness.intimacy_depiction.score`.
+- **Label (`filtering_scores.sexual_content.label`):** Based on `intimacy_depiction.score`:
+  - 0.0-0.3: "Minimal"
+  - 0.4-0.6: "Moderate"
+  - 0.7-1.0: "High"
+- **Interpretation:** Higher score = more sexual content.
+
+### 3. Violence Graphicness
+- **Score (`filtering_scores.violence_graphicness.score`):** Directly from `detailed_analysis.content_wellness.aggression_spectrum.overall_aggression_score`.
+- **Label (`filtering_scores.violence_graphicness.label`):** Based on `overall_aggression_score`:
+  - 0.0-0.3: "Low"
+  - 0.4-0.6: "Moderate"
+  - 0.7-1.0: "High"
+- **Interpretation:** Higher score = more violence.
+
+### 4. Substance Promotion
+- **Score (`filtering_scores.substance_promotion.score`):** Directly from `detailed_analysis.content_wellness.substance_messaging.score`.
+- **Label (`filtering_scores.substance_promotion.label`):** Based on `substance_messaging.score`:
+  - 0.0-0.3: "Low Impact"
+  - 0.4-0.6: "Moderate/Normalized"
+  - 0.7-1.0: "High/Glorified"
+- **Interpretation:** Higher score = more substance promotion.
+
+### 5. Negative Psychological Impact
+- **Score (`filtering_scores.negative_psychological_impact.score`):** Derived from `detailed_analysis.psychological_patterns.overall_negative_patterns_score`. This score considers factors like rumination, helplessness, catastrophic outlook, self-destructive themes from aggression spectrum, and trauma references.
+- **Label (`filtering_scores.negative_psychological_impact.label`):** Based on the calculated score:
+  - 0.0-0.3: "Low Negative Impact"
+  - 0.4-0.6: "Moderate Negative Impact"
+  - 0.7-1.0: "High Negative Impact"
+- **Interpretation:** Higher score = MORE negative psychological impact.
+
+### 6. Positive Psychological Impact
+- **Score (`filtering_scores.positive_psychological_impact.score`):** Derived from `detailed_analysis.positive_attributes.overall_positive_attributes_score` (which includes empowerment, resilience, growth potential).
+- **Label (`filtering_scores.positive_psychological_impact.label`):** Based on the calculated score:
+  - 0.0-0.3: "Low Positive Impact"
+  - 0.4-0.6: "Moderate Positive Impact"
+  - 0.7-1.0: "High Positive Impact"
+- **Interpretation:** Higher score = MORE positive psychological impact.
+
+### 7. Min Age Rating
+- **Rating Label (`filtering_scores.min_age_rating.rating_label`):** From `detailed_analysis.wellness_summary.developmental_stage_assessment.assessed_stage_label` (e.g., "adolescence").
+- **Numeric Value (`filtering_scores.min_age_rating.numeric_value`):** From `detailed_analysis.wellness_summary.developmental_stage_assessment.numeric_min_age` (e.g., 13).
+
+## Detailed Assessment Guidelines (Cinnamon-Specific)
+
+These guidelines define the scales for Cinnamon's unique `detailed_analysis` components.
+
+### Content Wellness (`detailed_analysis.content_wellness`)
+
+#### Language Impact (`.language_impact`)
+- **Purpose:** Evaluates not just profanity presence but emotional charge and context.
+- **Score (`.score`):** 0.0 - 1.0
+- **Value Range Labels (`.label` derived from `.score`):**
+  - **0.0-0.3:** "Neutral" (Neutral or constructive language patterns)
+  - **0.4-0.6:** "Emotionally Charged" (Emotionally charged but contextually appropriate)
+  - **0.7-1.0:** "Aggressive/Diminishing" (Language that promotes aggression or diminishes others)
+- **Contribution:** Feeds `filtering_scores.explicit_language`.
+
+#### Substance Messaging (`.substance_messaging`)
+- **Purpose:** Considers portrayal context: glorification vs. cautionary vs. realistic.
+- **Score (`.score`):** 0.0 - 1.0
+- **Value Range Labels (`.label` derived from `.score`):**
+  - **0.0-0.3:** "Low Risk" (Absent, educational, or recovery-focused messaging)
+  - **0.4-0.6:** "Present/Balanced/Consequence-aware"
+  - **0.7-1.0:** "Romanticized/Escapist/Dependency-promoting"
+- **Contribution:** Feeds `filtering_scores.substance_promotion`.
+
+#### Aggression Spectrum (`.aggression_spectrum`)
+- **Purpose:** Assesses various forms of aggression and hostility.
+- **Individual Scores (e.g., `.physical_hostility_score`):** 0.0 - 1.0 each.
+- **Overall Score (`.overall_aggression_score`):** Aggregate of individual aggression scores (e.g., MAX or weighted average).
+- **Value Range Labels (`.label` derived from `.overall_aggression_score`):**
+  - **0.0-0.3:** "Low"
+  - **0.4-0.6:** "Moderate"
+  - **0.7-1.0:** "High"
+- **Contribution:** Feeds `filtering_scores.violence_graphicness`. Self-destructive themes and trauma also inform `filtering_scores.negative_psychological_impact`.
+
+#### Intimacy Depiction (`.intimacy_depiction`)
+- **Purpose:** Evaluates the nature and explicitness of sexual or intimate content.
+- **Score (`.score`):** 0.0 - 1.0
+- **Value Range Labels (`.label` derived from `.score`):**
+  - **0.0-0.3:** "Minimal" (Minimal or subtle intimacy)
+  - **0.4-0.6:** "Moderate/Suggestive"
+  - **0.7-1.0:** "High/Explicit"
+- **Contribution:** Feeds `filtering_scores.sexual_content`.
+
+### Psychological Patterns (`detailed_analysis.psychological_patterns`)
+- **Purpose:** Identifies potentially harmful or beneficial psychological themes.
+- **Individual Scores (e.g., `.rumination_tendency.score`):** 0.0 - 1.0 each.
+- **Value Range Labels (e.g., `.rumination_tendency.label` derived from its `.score`):**
+  - **0.0-0.3:** "Low"
+  - **0.4-0.6:** "Moderate"
+  - **0.7-1.0:** "High"
+- **Overall Score (`.overall_negative_patterns_score`):** Aggregate of negative patterns (e.g., AVERAGE or MAX of rumination, helplessness, catastrophic outlook, victimhood, identity rigidity).
+- **Contribution:** `overall_negative_patterns_score` feeds `filtering_scores.negative_psychological_impact`.
+
+### Positive Attributes (`detailed_analysis.positive_attributes`)
+- **Purpose:** Identifies themes of empowerment, resilience, and growth.
+- **Individual Scores (e.g., `.empowerment_score`):** 0.0 - 1.0 each.
+- **Overall Score (`.overall_positive_attributes_score`):** Aggregate of positive attributes.
+- **Value Range Labels (derived from `.overall_positive_attributes_score`):**
+  - **0.0-0.3:** "Low"
+  - **0.4-0.6:** "Moderate"
+  - **0.7-1.0:** "High"
+- **Contribution:** Feeds `filtering_scores.positive_psychological_impact`.
+
+### Developmental Stage Assessment (`detailed_analysis.wellness_summary.developmental_stage_assessment`)
+- **Purpose:** Determines the most appropriate minimum age for the content based on overall complexity, themes, and potential impact.
+- **Output:** `.assessed_stage_label` (e.g., "adolescence"), `.numeric_min_age` (e.g., 13), and `.rationale_for_assessment`.
+- **Contribution:** Feeds `filtering_scores.min_age_rating`.
+
+## Unique Cinnamon Features
+
+### Holistic Wellness Perspective
+- Evaluates content through trauma-informed lens
+- Considers neurodevelopmental impact
+- Assesses emotional regulation influence
+- Examines social learning potential
+
+### Strength-Based Analysis
+- Identifies growth and empowerment opportunities
+- Recognizes artistic expression value
+- Considers therapeutic potential of music
+
+### Developmental Sensitivity
+- Age-specific impact assessment
+- Brain development considerations
+- Critical period awareness
+
+## Usage Instructions
+
+1. Paste song lyrics after this prompt.
+2. AI provides wellness-focused analysis based on the Cinnamon framework.
+3. AI returns a JSON object structured as per the "Analysis Template" above, including both `filtering_scores` and Cinnamon-specific `detailed_analysis`.
+4. Therapists, parents, or individuals use this data for informed choices.
+5. Supports mental health-conscious music curation and developmentally appropriate content selection.
+
+**Example Usage:**
+"Analyze these lyrics using the Cinnamon framework: [PASTE LYRICS HERE]"

@@ -1,0 +1,109 @@
+{
+  "analysis": {
+    "framework_applied": "vanilla",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.3,
+        "label": "Mild"
+      },
+      "sexual_content": {
+        "score": 0.2,
+        "label": "All-Ages"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "negative_psychological_impact": {
+        "score": 0.2,
+        "label": "Minimal Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.0,
+        "label": "Not Actively Assessed",
+        "interpretation": "Higher score = more positive impact (informational)"
+      },
+      "min_age_rating": {
+        "rating_label": "13+",
+        "numeric_value": 13
+      }
+    },
+    "detailed_analysis": {
+      "language_assessment": {
+        "profanity_score": 0.3,
+        "offensive_terms_score": 0.0,
+        "overall_explicit_language_score": 0.3,
+        "label": "Mild"
+      },
+      "maturity_assessment": {
+        "sexual_content_score": 0.2,
+        "adult_themes_score": 0.0,
+        "overall_mature_content_score": 0.2,
+        "label": "All-Ages"
+      },
+      "violence_assessment": {
+        "physical_violence_score": 0.0,
+        "emotional_violence_score": 0.0,
+        "self_harm_references_score": 0.0,
+        "weapon_mentions_score": 0.0,
+        "threats_intimidation_score": 0.0,
+        "overall_violence_level_score": 0.0,
+        "label": "Low"
+      },
+      "substance_assessment": {
+        "substance_use_references_score": 0.0,
+        "substance_use_normalization_score": 0.0,
+        "overall_substance_glorification_score": 0.0,
+        "substances_mentioned": [],
+        "label": "Low"
+      },
+      "psychological_risk_assessment": {
+        "cognitive_distortions_raw": {
+          "all_or_nothing_thinking": 0.0,
+          "catastrophizing": 0.0,
+          "personalization": 0.0,
+          "mind_reading": 0.0,
+          "fortune_telling": 0.0,
+          "emotional_reasoning": 0.0,
+          "should_statements": 0.0,
+          "labeling": 0.0,
+          "mental_filter": 0.0,
+          "disqualifying_positive": 0.0,
+          "magnification_minimization": 0.0,
+          "blame_attribution": 0.0
+        },
+        "cognitive_distortion_average_score": 0.0,
+        "subconscious_reinforcement_risk_score": 0.2,
+        "behavioral_modeling_risk_score": 0.0,
+        "overall_negative_impact_raw_score": 0.2,
+        "overall_negative_impact_label": "Minimal Impact"
+      },
+      "general_summary": {
+        "primary_themes_identified": [
+          "self-confidence",
+          "rejection",
+          "busy lifestyle"
+        ],
+        "overall_emotional_tone": "empowering",
+        "content_advisory_notes": "Mild language used. No explicit sexual content, violence, or substance promotion.",
+        "age_recommendation_details": {
+          "suggested_min_age_numeric": 13,
+          "rationale": "Mild language and mature themes suitable for teenagers and above."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Sabrina Carptenter",
+    "title": "Busy Woman",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 10821491,
+    "track_url": "https://genius.com/Sabrina-carpenter-busy-woman-lyrics"
+  }
+}

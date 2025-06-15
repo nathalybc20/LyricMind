@@ -1,0 +1,137 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.9,
+        "label": "High/Aggressive or Diminishing"
+      },
+      "sexual_content": {
+        "score": 0.9,
+        "label": "High/Explicit"
+      },
+      "violence_graphicness": {
+        "score": 0.2,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.2,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.5,
+        "label": "Moderate Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.3,
+        "label": "Low Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adult",
+        "numeric_value": 21
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.9,
+          "label": "Aggressive/Diminishing"
+        },
+        "substance_messaging": {
+          "score": 0.2,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.2,
+          "relational_toxicity_score": 0.5,
+          "self_destructive_themes_score": 0.2,
+          "power_dynamics_score": 0.6,
+          "trauma_references_score": 0.2,
+          "overall_aggression_score": 0.2,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.9,
+          "label": "High/Explicit"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "helplessness_messaging": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "identity_rigidity": {
+          "score": 0.6,
+          "label": "High"
+        },
+        "social_comparison": {
+          "score": 0.6,
+          "label": "High"
+        },
+        "catastrophic_outlook": {
+          "score": 0.3,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "victimhood_narrative": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "grandiosity": {
+          "score": 0.7,
+          "label": "High"
+        },
+        "attachment_insecurity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "overall_negative_patterns_score": 0.5,
+        "label_negative_patterns": "Moderate"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.3,
+        "resilience_promotion_score": 0.2,
+        "growth_potential_score": 0.3,
+        "overall_positive_attributes_score": 0.3,
+        "label_positive_attributes": "Low"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Sexual Empowerment",
+          "Identity Assertion",
+          "Power Dynamics"
+        ],
+        "emotional_journey_description": "The song presents a narrative of sexual empowerment and assertive identity, with the artist taking control and expressing dominance in her relationships. However, the explicit sexual content and aggressive language may not be suitable for all listeners.",
+        "message_reinforcement_clarity_score": 0.8,
+        "lyrical_sophistication_score": 0.6
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains explicit sexual content and aggressive language, which may not be suitable for younger audiences. It also presents themes of identity rigidity, social comparison, and grandiosity, which could potentially influence listeners' psychological patterns.",
+        "therapeutic_considerations": "While the song may be empowering for some listeners, it's important to consider the potential impact of the explicit content and the psychological themes it presents. Discussions around healthy relationships, sexual consent, and self-worth could be beneficial.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adult",
+          "numeric_min_age": 21,
+          "rationale_for_assessment": "Given the explicit sexual content, aggressive language, and complex psychological themes, this song is assessed as most suitable for adults (21+)."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Nicky Minage",
+    "title": "Super Freaky Girl",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 8195634,
+    "track_url": "https://genius.com/Nicki-minaj-super-freaky-girl-lyrics"
+  }
+}

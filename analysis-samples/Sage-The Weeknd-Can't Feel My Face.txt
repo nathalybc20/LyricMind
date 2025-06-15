@@ -1,0 +1,133 @@
+{
+  "analysis": {
+    "framework_applied": "sage",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "sexual_content": {
+        "score": 0.2,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.8,
+        "label": "Normalization to Glorification"
+      },
+      "negative_psychological_impact": {
+        "score": 0.6,
+        "label": "Some Concerning Themes",
+        "interpretation": "The song contains themes of substance abuse and dependency, which could have a negative impact on listeners."
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Developmental Value",
+        "interpretation": "The song does not provide much positive developmental value, as it primarily focuses on themes of substance abuse."
+      },
+      "min_age_rating": {
+        "rating_label": "18+",
+        "numeric_value": 18
+      }
+    },
+    "detailed_analysis": {
+      "developmental_profile": {
+        "identity_support_score": 0.2,
+        "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.3,
+        "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.2,
+        "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.1,
+        "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.2,
+        "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.2,
+        "overall_positive_development_label": "Low"
+      },
+      "risk_assessment": {
+        "explicit_language_score": 0.0,
+        "explicit_language_label": "Minimal",
+        "sexual_content_score": 0.2,
+        "sexual_content_label": "Minimal",
+        "violence_graphicness_score": 0.0,
+        "violence_graphicness_label": "Low",
+        "substance_promotion_score": 0.8,
+        "substance_promotion_label": "Normalization to Glorification",
+        "overall_risk_factors_score": 0.6,
+        "overall_risk_factors_label": "Some Concerning Themes"
+      },
+      "age_and_context": {
+        "suggested_min_age_numeric": 18,
+        "developmental_stage_appropriateness_label": "late_adolescence",
+        "rationale_for_age_rating": "The song contains themes of substance abuse and dependency, which are not suitable for younger audiences."
+      },
+      "developmental_assets": {
+        "self_discovery_themes": 0.2,
+        "authenticity_promotion": 0.3,
+        "diversity_acceptance": 0.2,
+        "growth_mindset": 0.1,
+        "resilience_building": 0.2,
+        "creative_expression": 0.3,
+        "social_consciousness": 0.2
+      },
+      "emotional_skills": {
+        "emotion_recognition": 0.3,
+        "healthy_coping_strategies": 0.2,
+        "empathy_development": 0.3,
+        "conflict_resolution": 0.2,
+        "stress_management": 0.2,
+        "emotional_regulation": 0.2
+      },
+      "social_development": {
+        "healthy_boundaries": 0.2,
+        "communication_skills": 0.3,
+        "consent_awareness": 0.2,
+        "friendship_quality": 0.2,
+        "family_relationships": 0.2,
+        "community_connection": 0.2
+      },
+      "risk_factors_details": {
+        "toxic_masculinity": 0.0,
+        "toxic_femininity": 0.0,
+        "unrealistic_expectations": 0.4,
+        "materialism_focus": 0.0,
+        "instant_gratification": 0.6,
+        "comparison_culture": 0.0,
+        "authority_rebellion": 0.0,
+        "risky_behavior_glamorization": 0.8
+      },
+      "life_skills_details": {
+        "decision_making": 0.2,
+        "problem_solving": 0.2,
+        "goal_achievement": 0.1,
+        "financial_awareness": 0.0,
+        "academic_motivation": 0.0,
+        "career_exploration": 0.0
+      },
+      "youth_summary_notes": {
+        "positive_role_modeling_score": 0.1,
+        "peer_influence_type_observed": "negative_observational",
+        "key_conversation_starters": [
+          "The dangers of substance abuse",
+          "The importance of healthy coping mechanisms"
+        ],
+        "identified_growth_opportunities": [
+          "Understanding the negative impacts of substance abuse",
+          "Learning about healthy relationships and boundaries"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "artist": "The Weeknd",
+    "title": "Can't Feel My Face",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 729458,
+    "track_url": "https://genius.com/The-weeknd-cant-feel-my-face-lyrics"
+  }
+}

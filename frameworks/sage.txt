@@ -1,0 +1,262 @@
+# Sage Music Lyrics Analysis Framework
+# Version: 1.0
+# Updated: 2025-01-15
+# Changes: Initial version
+
+
+**Instructions for AI Analysis:**
+Analyze song lyrics for their developmental value to young people (ages 12-25), focusing on identity formation, emotional intelligence, and healthy life skills. This framework prioritizes content that supports positive youth development while identifying potentially harmful messaging. Do not reproduce copyrighted lyrics in your response.
+
+## FILTERING_METRICS (For Music Player Integration)
+
+```json
+{
+  "framework_name": "sage",
+  "description": "The Sage framework analyzes song lyrics for developmental value to young people (ages 12-25), focusing on identity formation, emotional intelligence, and healthy life skills. It prioritizes content supporting positive youth development while identifying harmful messaging.",
+  "color_hex": "#A7BCA4",
+  "filtering_thresholds": {
+    "explicit_language": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.3,
+      "description": "Level of profanity. Sage prioritizes developmentally appropriate language.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Minimal"},
+        {"range": [0.3, 0.4], "label": "Mild"},
+        {"range": [0.5, 1.0], "label": "Moderate to Strong"}
+      ],
+      "interpretation_note": "Higher score = more explicit language. Songs ABOVE threshold are filtered."
+    },
+    "sexual_content": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.3,
+      "description": "Level of sexual themes. Sage prioritizes age-appropriate and non-exploitative content.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Minimal"},
+        {"range": [0.3, 0.4], "label": "Mild Suggestive"},
+        {"range": [0.5, 1.0], "label": "Explicit/Mature"}
+      ],
+      "interpretation_note": "Higher score = more sexual content. Songs ABOVE threshold are filtered."
+    },
+    "violence_graphicness": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.3,
+      "description": "Level of violence. Sage prioritizes constructive conflict resolution and safety.",
+       "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Low"},
+        {"range": [0.3, 0.4], "label": "Mild Conflict/Antagonism"},
+        {"range": [0.5, 1.0], "label": "Moderate to Graphic Violence"}
+      ],
+      "interpretation_note": "Higher score = more violence. Songs ABOVE threshold are filtered."
+    },
+    "substance_promotion": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.3,
+      "description": "Level of substance use glorification. Sage prioritizes healthy choices.",
+      "value_range_labels": [
+        {"range": [0.0, 0.2], "label": "Low Impact"},
+        {"range": [0.3, 0.4], "label": "Casual Mentions"},
+        {"range": [0.5, 1.0], "label": "Normalization to Glorification"}
+      ],
+      "interpretation_note": "Higher score = more substance promotion. Songs ABOVE threshold are filtered."
+    },
+    "negative_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.4,
+      "description": "Potential for promoting risk factors (e.g., toxic behaviors, unrealistic expectations). Higher scores indicate greater negative impact.",
+      "value_range_labels": [
+        {"range": [0.0, 0.3], "label": "Low Risk"},
+        {"range": [0.4, 0.6], "label": "Some Concerning Themes"},
+        {"range": [0.7, 1.0], "label": "Significant Risk Factors Present"}
+      ],
+      "interpretation_note": "Higher score = MORE negative psychological impact. Songs ABOVE threshold are filtered."
+    },
+    "positive_psychological_impact": {
+      "type": "slider", "range": [0.0, 1.0], "default": 0.5, 
+      "description": "Overall positive developmental value (identity, emotional skills, healthy relationships, etc.). Higher scores are better.",
+      "value_range_labels": [
+        {"range": [0.0, 0.4], "label": "Low Developmental Value"},
+        {"range": [0.5, 0.7], "label": "Moderate Developmental Value"},
+        {"range": [0.8, 1.0], "label": "High Developmental Value"}
+      ],
+      "interpretation_note": "Higher score = more positive psychological impact. Songs BELOW threshold are filtered (Sage prioritizes positive content)."
+    },
+    "min_age_rating_filter": {
+      "type": "dropdown",
+      "options_map": {
+          "all": 0, "12+": 12, "14+": 14,
+          "16+": 16, "18+": 18, "young_adult": 21 
+      },
+      "options_display": ["all", "12+", "14+", "16+", "18+", "young_adult (21+)"],
+      "default": "14+",
+      "description": "Minimum age recommendation based on developmental appropriateness. Filters songs rated for an older audience."
+    }
+  }
+}
+```
+
+## Analysis Template (JSON Format for AI Output)
+
+This is the structure the AI should return when using the Sage framework.
+
+```json
+{
+  "framework_applied": "sage",
+  "filtering_scores": {
+    "explicit_language": { 
+      "score": 0.0,
+      "label": "Minimal"
+    },
+    "sexual_content": { 
+      "score": 0.0, 
+      "label": "Minimal"
+    },
+    "violence_graphicness": { 
+      "score": 0.0, 
+      "label": "Low"
+    },
+    "substance_promotion": { 
+      "score": 0.0, 
+      "label": "Low Impact"
+    },
+    "negative_psychological_impact": {
+      "score": 0.0, 
+      "label": "Low Risk", 
+      "interpretation": "Higher score = more negative impact from risk factors"
+    },
+    "positive_psychological_impact": {
+      "score": 0.0, 
+      "label": "Low Developmental Value",
+      "interpretation": "Higher score = more positive developmental value"
+    },
+    "min_age_rating": {
+        "rating_label": "14+",
+        "numeric_value": 14
+    }
+  },
+  "detailed_analysis": { 
+    "developmental_profile": {
+        "identity_support_score": 0.0, "identity_support_label": "Low",
+        "emotional_intelligence_score": 0.0, "emotional_intelligence_label": "Low",
+        "relationship_modeling_score": 0.0, "relationship_modeling_label": "Low",
+        "future_orientation_score": 0.0, "future_orientation_label": "Low",
+        "life_skills_enhancement_score": 0.0, "life_skills_enhancement_label": "Low",
+        "overall_positive_development_score": 0.0, "overall_positive_development_label": "Low"
+    },
+    "risk_assessment": {
+        "explicit_language_score": 0.0, "explicit_language_label": "Minimal",
+        "sexual_content_score": 0.0, "sexual_content_label": "Minimal",
+        "violence_graphicness_score": 0.0, "violence_graphicness_label": "Low",
+        "substance_promotion_score": 0.0, "substance_promotion_label": "Low Impact",
+        "overall_risk_factors_score": 0.0, "overall_risk_factors_label": "Low Risk"
+    },
+    "age_and_context": {
+        "suggested_min_age_numeric": 14,
+        "developmental_stage_appropriateness_label": "mid_adolescence",
+        "rationale_for_age_rating": ""
+    },
+    "developmental_assets": { 
+      "self_discovery_themes": 0.0, "authenticity_promotion": 0.0, "diversity_acceptance": 0.0, 
+      "growth_mindset": 0.0, "resilience_building": 0.0, "creative_expression": 0.0, "social_consciousness": 0.0
+    },
+    "emotional_skills": {
+      "emotion_recognition": 0.0, "healthy_coping_strategies": 0.0, "empathy_development": 0.0,
+      "conflict_resolution": 0.0, "stress_management": 0.0, "emotional_regulation": 0.0
+    },
+    "social_development": {
+      "healthy_boundaries": 0.0, "communication_skills": 0.0, "consent_awareness": 0.0,
+      "friendship_quality": 0.0, "family_relationships": 0.0, "community_connection": 0.0
+    },
+    "risk_factors_details": { 
+      "toxic_masculinity": 0.0, "toxic_femininity": 0.0, "unrealistic_expectations": 0.0,
+      "materialism_focus": 0.0, "instant_gratification": 0.0, "comparison_culture": 0.0,
+      "authority_rebellion": 0.0, "risky_behavior_glamorization": 0.0
+    },
+    "life_skills_details": {
+      "decision_making": 0.0, "problem_solving": 0.0, "goal_achievement": 0.0,
+      "financial_awareness": 0.0, "academic_motivation": 0.0, "career_exploration": 0.0
+    },
+    "youth_summary_notes": {
+      "positive_role_modeling_score": 0.0,
+      "peer_influence_type_observed": "neutral_observational",
+      "key_conversation_starters": [],
+      "identified_growth_opportunities": []
+    }
+  }
+}
+```
+
+## Filtering Metrics Calculation (for AI Output Generation)
+
+The AI will populate the `filtering_scores` block in its JSON output. Here's how these common scores (and their labels) are derived from Sage's `detailed_analysis` components:
+
+### 1. Explicit Language
+- **Score (`filtering_scores.explicit_language.score`):** From `detailed_analysis.risk_assessment.explicit_language_score`.
+- **Label (`filtering_scores.explicit_language.label`):** Based on this score (e.g., 0.0-0.2: "Minimal", 0.3-0.4: "Mild", 0.5-1.0: "Moderate to Strong").
+
+### 2. Sexual Content
+- **Score (`filtering_scores.sexual_content.score`):** From `detailed_analysis.risk_assessment.sexual_content_score`.
+- **Label (`filtering_scores.sexual_content.label`):** Based on this score (e.g., 0.0-0.2: "Minimal", 0.3-0.4: "Mild Suggestive", 0.5-1.0: "Explicit/Mature").
+
+### 3. Violence Graphicness
+- **Score (`filtering_scores.violence_graphicness.score`):** From `detailed_analysis.risk_assessment.violence_graphicness_score`.
+- **Label (`filtering_scores.violence_graphicness.label`):** Based on this score (e.g., 0.0-0.2: "Low", 0.3-0.4: "Mild Conflict", 0.5-1.0: "Moderate to Graphic Violence").
+
+### 4. Substance Promotion
+- **Score (`filtering_scores.substance_promotion.score`):** From `detailed_analysis.risk_assessment.substance_promotion_score`.
+- **Label (`filtering_scores.substance_promotion.label`):** Based on this score (e.g., 0.0-0.2: "Low Impact", 0.3-0.4: "Casual Mentions", 0.5-1.0: "Normalization to Glorification").
+
+### 5. Negative Psychological Impact
+- **Score (`filtering_scores.negative_psychological_impact.score`):** From `detailed_analysis.risk_assessment.overall_risk_factors_score`.
+- **Label (`filtering_scores.negative_psychological_impact.label`):** Based on this score (e.g., 0.0-0.3: "Low Risk", 0.4-0.6: "Some Concerning Themes", 0.7-1.0: "Significant Risk Factors Present").
+- **Interpretation:** Higher score = more negative impact from risk factors.
+
+### 6. Positive Psychological Impact
+- **Score (`filtering_scores.positive_psychological_impact.score`):** From `detailed_analysis.developmental_profile.overall_positive_development_score`.
+- **Label (`filtering_scores.positive_psychological_impact.label`):** Based on this score (e.g., 0.0-0.4: "Low Developmental Value", 0.5-0.7: "Moderate Developmental Value", 0.8-1.0: "High Developmental Value").
+- **Interpretation:** Higher score = more positive developmental value. This is a key metric for Sage.
+
+### 7. Min Age Rating
+- **Rating Label (`filtering_scores.min_age_rating.rating_label`):** Derived from `detailed_analysis.age_and_context.suggested_min_age_numeric` and `developmental_stage_appropriateness_label`.
+- **Numeric Value (`filtering_scores.min_age_rating.numeric_value`):** From `detailed_analysis.age_and_context.suggested_min_age_numeric`.
+
+## Detailed Assessment Guidelines (Sage-Specific)
+
+These guidelines define the scales for Sage's `detailed_analysis` components.
+
+### Developmental Profile (`detailed_analysis.developmental_profile`)
+- **Overall Positive Development Score (`.overall_positive_development_score`):** Aggregate of sub-scores below. Label: Low (0-0.4), Moderate (0.5-0.7), High (0.8-1.0).
+  - **Identity Support Score (`.identity_support_score`):** `AVERAGE(developmental_assets.self_discovery_themes, .authenticity_promotion, .diversity_acceptance, .growth_mindset)`. Label: Low/Moderate/High.
+  - **Emotional Intelligence Score (`.emotional_intelligence_score`):** `AVERAGE(emotional_skills.emotion_recognition, .healthy_coping_strategies, .empathy_development, .emotional_regulation)`. Label: Low/Moderate/High.
+  - **Relationship Modeling Score (`.relationship_modeling_score`):** `AVERAGE(social_development.healthy_boundaries, .communication_skills, .consent_awareness, .friendship_quality) - (AVERAGE(risk_factors_details.toxic_masculinity, .toxic_femininity) * 0.5)`. Ensure score is capped at 0.0-1.0. Label: Low/Moderate/High.
+  - **Future Orientation Score (`.future_orientation_score`):** `AVERAGE(life_skills_details.goal_achievement, .academic_motivation, .career_exploration, .decision_making) - (risk_factors_details.instant_gratification * 0.3)`. Ensure score is capped at 0.0-1.0. Label: Low/Moderate/High.
+  - **Life Skills Enhancement Score (`.life_skills_enhancement_score`):** `AVERAGE(life_skills_details.decision_making, .problem_solving, .goal_achievement)`. Label: Low/Moderate/High.
+
+### Risk Assessment (`detailed_analysis.risk_assessment`)
+- **Overall Risk Factors Score (`.overall_risk_factors_score`):** `AVERAGE` of all scores in `detailed_analysis.risk_factors_details`. Label: Low Risk (0-0.3), Some Concerning Themes (0.4-0.6), Significant Risk Factors (0.7-1.0).
+- **Explicit Language Score (`.explicit_language_score`):** Direct assessment 0.0-1.0. Label: Minimal (0-0.2), Mild (0.3-0.4), Moderate to Strong (0.5-1.0).
+- **Sexual Content Score (`.sexual_content_score`):** Direct assessment 0.0-1.0. Label: Minimal (0-0.2), Mild Suggestive (0.3-0.4), Explicit/Mature (0.5-1.0).
+- **Violence Graphicness Score (`.violence_graphicness_score`):** Direct assessment 0.0-1.0. Label: Low (0-0.2), Mild Conflict (0.3-0.4), Moderate to Graphic (0.5-1.0).
+- **Substance Promotion Score (`.substance_promotion_score`):** Direct assessment 0.0-1.0. Label: Low Impact (0-0.2), Casual Mentions (0.3-0.4), Normalization to Glorification (0.5-1.0).
+
+### Detailed Components (0.0-1.0 each, Low/Moderate/High labels can be applied)
+- **Developmental Assets (`detailed_analysis.developmental_assets`):** As previously defined (Self-Discovery, Authenticity, etc.).
+- **Emotional Skills (`detailed_analysis.emotional_skills`):** As previously defined (Emotion Recognition, Coping, etc.).
+- **Social Development (`detailed_analysis.social_development`):** As previously defined (Healthy Boundaries, Communication, etc.).
+- **Risk Factors Details (`detailed_analysis.risk_factors_details`):** As previously defined (Toxic Masculinity, Materialism, etc.).
+- **Life Skills Details (`detailed_analysis.life_skills_details`):** As previously defined (Decision Making, Problem Solving, etc.).
+
+### Age and Context (`detailed_analysis.age_and_context`)
+- **Suggested Min Age Numeric (`.suggested_min_age_numeric`):** Numeric age (e.g., 12, 14, 16, 18, 21).
+- **Developmental Stage Appropriateness Label (`.developmental_stage_appropriateness_label`):** e.g., "early_adolescence", "mid_adolescence", "late_adolescence", "emerging_adulthood", "cross_developmental".
+- **Rationale for Age Rating (`.rationale_for_age_rating`):** Brief explanation.
+
+### Youth Summary Notes (`detailed_analysis.youth_summary_notes`)
+- Includes `.positive_role_modeling_score`, `.peer_influence_type_observed`, `.key_conversation_starters`, `.identified_growth_opportunities` as before.
+- Promotes academic and career motivation
+
+## Usage Instructions
+
+1. Paste song lyrics after this prompt
+2. AI provides youth development-focused analysis
+3. Returns comprehensive developmental impact data
+4. Parents, educators, or youth use for growth-oriented music curation
+5. Supports conversations about healthy development
+6. Enables music selection that actively promotes positive growth
+
+**Example Usage:**
+"Analyze these lyrics for youth development impact: [PASTE LYRICS HERE]"

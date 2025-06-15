@@ -1,0 +1,140 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.9,
+        "label": "High/Aggressive or Diminishing"
+      },
+      "sexual_content": {
+        "score": 0.5,
+        "label": "Moderate/Suggestive"
+      },
+      "violence_graphicness": {
+        "score": 0.7,
+        "label": "High/Graphic"
+      },
+      "substance_promotion": {
+        "score": 0.6,
+        "label": "Moderate/Normalized"
+      },
+      "negative_psychological_impact": {
+        "score": 0.8,
+        "label": "High Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adult",
+        "numeric_value": 21
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.9,
+          "label": "Aggressive/Diminishing"
+        },
+        "substance_messaging": {
+          "score": 0.6,
+          "label": "Moderate/Normalized"
+        },
+        "substances_mentioned": [
+          "drugs"
+        ],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.7,
+          "relational_toxicity_score": 0.6,
+          "self_destructive_themes_score": 0.5,
+          "power_dynamics_score": 0.6,
+          "trauma_references_score": 0.4,
+          "overall_aggression_score": 0.7,
+          "label": "High"
+        },
+        "intimacy_depiction": {
+          "score": 0.5,
+          "label": "Moderate/Suggestive"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.6,
+          "label": "Moderate"
+        },
+        "helplessness_messaging": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "identity_rigidity": {
+          "score": 0.7,
+          "label": "High"
+        },
+        "social_comparison": {
+          "score": 0.6,
+          "label": "Moderate"
+        },
+        "catastrophic_outlook": {
+          "score": 0.7,
+          "label": "High"
+        },
+        "perfectionism": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "victimhood_narrative": {
+          "score": 0.6,
+          "label": "Moderate"
+        },
+        "grandiosity": {
+          "score": 0.7,
+          "label": "High"
+        },
+        "attachment_insecurity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "overall_negative_patterns_score": 0.8,
+        "label_negative_patterns": "High"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.2,
+        "resilience_promotion_score": 0.3,
+        "growth_potential_score": 0.2,
+        "overall_positive_attributes_score": 0.2,
+        "label_positive_attributes": "Low"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "violence",
+          "drugs",
+          "sexual content",
+          "aggression"
+        ],
+        "emotional_journey_description": "The song presents a narrative of aggression, substance use, and sexual content, with a focus on a 'rockstar' lifestyle. There is a lack of emotional growth or resolution.",
+        "message_reinforcement_clarity_score": 0.8,
+        "lyrical_sophistication_score": 0.4
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains explicit language, sexual content, and themes of violence and substance use. It promotes a 'rockstar' lifestyle that may have a negative psychological impact, especially on younger listeners.",
+        "therapeutic_considerations": "The song may not be suitable for therapeutic use due to its explicit content and potential to trigger negative psychological states.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adult",
+          "numeric_min_age": 21,
+          "rationale_for_assessment": "The explicit content, themes of violence, and substance use make this song suitable for adult listeners only."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Playboi Carti",
+    "title": "Rockstar Made",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 6303402,
+    "track_url": "https://genius.com/Playboi-carti-rockstar-made-lyrics"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "sexual_content": {
+        "score": 0.0,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.3,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.2,
+        "label": "Low Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.4,
+        "label": "Moderate Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adolescence",
+        "numeric_value": 13
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.0,
+          "label": "Neutral"
+        },
+        "substance_messaging": {
+          "score": 0.0,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.0,
+          "relational_toxicity_score": 0.0,
+          "self_destructive_themes_score": 0.0,
+          "power_dynamics_score": 0.3,
+          "trauma_references_score": 0.0,
+          "overall_aggression_score": 0.3,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.0,
+          "label": "Minimal"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "helplessness_messaging": {
+          "score": 0.2,
+          "label": "Low"
+        },
+        "identity_rigidity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "social_comparison": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "catastrophic_outlook": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "grandiosity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "attachment_insecurity": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "overall_negative_patterns_score": 0.2,
+        "label_negative_patterns": "Low"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.4,
+        "resilience_promotion_score": 0.4,
+        "growth_potential_score": 0.4,
+        "overall_positive_attributes_score": 0.4,
+        "label_positive_attributes": "Moderate"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "resilience",
+          "overcoming adversity"
+        ],
+        "emotional_journey_description": "The song describes a journey of overcoming adversity, symbolized by the 'Holy Diver' and the 'tiger'. The lyrics suggest a struggle and the need to 'get away', but also the potential for triumph.",
+        "message_reinforcement_clarity_score": 0.7,
+        "lyrical_sophistication_score": 0.6
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains themes of struggle and adversity, but also resilience and the potential for triumph. It may be empowering for some listeners, but others may find the repeated references to struggle distressing.",
+        "therapeutic_considerations": "Could be used in discussions about resilience and overcoming adversity. The metaphorical language provides a good opportunity for exploring personal interpretations and emotional responses to music.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adolescence",
+          "numeric_min_age": 13,
+          "rationale_for_assessment": "The song's themes and metaphorical language are likely to be most appropriate and meaningful for adolescents and older."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Dio",
+    "title": "Holy Diver",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 433697,
+    "track_url": "https://genius.com/Dio-holy-diver-lyrics"
+  }
+}

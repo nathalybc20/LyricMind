@@ -1,0 +1,137 @@
+{
+  "analysis": {
+    "framework_applied": "cinnamon",
+    "filtering_scores": {
+      "explicit_language": {
+        "score": 0.3,
+        "label": "Low Impact"
+      },
+      "sexual_content": {
+        "score": 0.2,
+        "label": "Minimal"
+      },
+      "violence_graphicness": {
+        "score": 0.0,
+        "label": "Low"
+      },
+      "substance_promotion": {
+        "score": 0.0,
+        "label": "Low Impact"
+      },
+      "negative_psychological_impact": {
+        "score": 0.4,
+        "label": "Moderate Negative Impact",
+        "interpretation": "Higher score = more negative impact"
+      },
+      "positive_psychological_impact": {
+        "score": 0.5,
+        "label": "Moderate Positive Impact",
+        "interpretation": "Higher score = more positive impact"
+      },
+      "min_age_rating": {
+        "rating_label": "adolescence",
+        "numeric_value": 13
+      }
+    },
+    "detailed_analysis": {
+      "content_wellness": {
+        "language_impact": {
+          "score": 0.3,
+          "label": "Low Impact"
+        },
+        "substance_messaging": {
+          "score": 0.0,
+          "label": "Low Risk"
+        },
+        "substances_mentioned": [],
+        "aggression_spectrum": {
+          "physical_hostility_score": 0.0,
+          "relational_toxicity_score": 0.2,
+          "self_destructive_themes_score": 0.0,
+          "power_dynamics_score": 0.3,
+          "trauma_references_score": 0.0,
+          "overall_aggression_score": 0.2,
+          "label": "Low"
+        },
+        "intimacy_depiction": {
+          "score": 0.2,
+          "label": "Minimal"
+        }
+      },
+      "psychological_patterns": {
+        "rumination_tendency": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "helplessness_messaging": {
+          "score": 0.3,
+          "label": "Low"
+        },
+        "identity_rigidity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "social_comparison": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "catastrophic_outlook": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "perfectionism": {
+          "score": 0.0,
+          "label": "Low"
+        },
+        "victimhood_narrative": {
+          "score": 0.3,
+          "label": "Low"
+        },
+        "grandiosity": {
+          "score": 0.5,
+          "label": "Moderate"
+        },
+        "attachment_insecurity": {
+          "score": 0.4,
+          "label": "Moderate"
+        },
+        "overall_negative_patterns_score": 0.4,
+        "label_negative_patterns": "Moderate"
+      },
+      "positive_attributes": {
+        "empowerment_score": 0.5,
+        "resilience_promotion_score": 0.4,
+        "growth_potential_score": 0.6,
+        "overall_positive_attributes_score": 0.5,
+        "label_positive_attributes": "Moderate"
+      },
+      "narrative_analysis": {
+        "dominant_themes": [
+          "Self-assertion",
+          "Rejection",
+          "Independence"
+        ],
+        "emotional_journey_description": "The song portrays a journey of self-assertion and independence, with elements of rejection and emotional resilience.",
+        "message_reinforcement_clarity_score": 0.7,
+        "lyrical_sophistication_score": 0.6
+      },
+      "wellness_summary": {
+        "key_observations_and_warnings": "The song contains moderate levels of explicit language and identity rigidity. It also portrays a moderate level of grandiosity and attachment insecurity.",
+        "therapeutic_considerations": "The song could be used to discuss themes of self-assertion, rejection, and independence. It could also be used to explore the concept of identity and how it can be rigid or flexible.",
+        "developmental_stage_assessment": {
+          "assessed_stage_label": "adolescence",
+          "numeric_min_age": 13,
+          "rationale_for_assessment": "The song's themes and language are most appropriate for an adolescent audience."
+        }
+      }
+    }
+  },
+  "metadata": {
+    "artist": "Sabrina Carpenter",
+    "title": "Busy Woman",
+    "source": "genius",
+    "confidence": 0.9,
+    "genius_id": 10821491,
+    "track_url": "https://genius.com/Sabrina-carpenter-busy-woman-lyrics"
+  }
+}

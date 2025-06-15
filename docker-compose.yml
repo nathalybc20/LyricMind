@@ -1,0 +1,28 @@
+services:
+  lyricmind: # API service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001" # Host port 5001 maps to container port 5001
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./frameworks:/app/frameworks:ro
+      - ./data:/app/data
+    # Environment variables like API keys should be sourced from config.yaml by the application.
+    # The Dockerfile's CMD ["python", "run_api.py"] will be used to start the API.
+
+  cli: # CLI service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/app/api 
+      - ./config.yaml:/app/config.yaml:ro
+      - ./frameworks:/app/frameworks:ro
+      - ./data:/app/data      
+    entrypoint: ["python3", "cli/main.py"]
+    # Example usage:
+    # docker-compose run --rm cli --help
+    # docker-compose run --rm cli search "Artist Name" "Song Title"
+    # docker-compose run --rm cli analyze-song "Artist Name" "Song Title" --framework vanilla

@@ -49,3 +49,4 @@ real-config.yaml
 # Operating System files
 .DS_Store
 Thumbs.db
+config.yaml
